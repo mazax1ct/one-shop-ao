@@ -1,0 +1,65 @@
+.form-label
+  display: block
+
+  &__text
+    display: block
+    font-size: 15px
+    font-weight: 600
+    line-height: 18px
+    margin-bottom: 10px
+
+.input,
+.textarea
+  background-color: #fff
+  border: 1px solid #C3C3C3
+  border-radius: 3px
+  color: $text-color
+  font-size: 16px
+  line-height: 20px
+  width: 100%
+
+  &:focus
+    border-color: #419701
+
+  &.error
+    border-color: #FF121D
+
+    &:focus
+      border-color: #FF121D
+
+  &:disabled
+    opacity: 0.5
+
+.input
+  height: 55px
+  padding: 17px 27px 17px
+
+.textarea
+  height: 200px
+  padding: 10px 27px
+  resize: none
+
+/*placeholder*/
+.input::-webkit-input-placeholder
+  color: #909090
+  opacity: 1
+
+.input::-moz-placeholder
+  color: #909090
+  opacity: 1
+
+.input:-ms-input-placeholder
+  color: #909090
+  opacity: 1
+
+.textarea::-webkit-input-placeholder
+  color: #909090
+  opacity: 1
+
+.textarea::-moz-placeholder
+  color: #909090
+  opacity: 1
+
+.textarea:-ms-input-placeholder
+  color: #909090
+  opacity: 1

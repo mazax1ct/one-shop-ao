@@ -1,0 +1,73 @@
+.footer
+  flex-shrink: 0
+
+  &__inner
+    font-size: 14px
+    line-height: 20px
+    padding-top: 30px
+    padding-bottom: 30px
+
+    @media(min-width: 768px)
+      display: flex
+      justify-content: space-between
+
+  &__left
+    margin-bottom: 34px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+    @media(min-width: 1280px)
+      display: flex
+
+  &__copyright
+    margin-top: 0
+    margin-bottom: 31px
+
+    @media(min-width: 1280px)
+      margin-bottom: 0
+      margin-right: 56px
+
+    @media(min-width: 1600px)
+      margin-right: 34px
+
+  &__links
+    list-style: none
+    margin-top: 0
+    padding: 0
+
+  &__links-item
+    margin-bottom: 0
+
+  &__link
+    color: $text-color
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+  &__contacts
+    @media(min-width: 1280px)
+      display: flex
+      margin-left: auto
+
+  &__contact
+    margin-top: 0
+
+    &:not(:last-child)
+      margin-bottom: 23px
+
+      @media(min-width: 768px)
+        margin-bottom: 11px
+
+      @media(min-width: 1280px)
+        margin-bottom: 0
+        margin-right: 78px
+
+  &__contact-link
+    color: $text-color
+    font-weight: 600
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline

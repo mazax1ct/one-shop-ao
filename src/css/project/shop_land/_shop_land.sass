@@ -1,0 +1,248 @@
+.intro
+  @media(min-width: 1024px)
+    display: flex
+    justify-content: space-between
+
+  &__left
+    @media(min-width: 1024px)
+      max-width: 760px
+      width: 75%
+
+  &__right
+    display: none
+    padding-left: 40px
+
+    @media(min-width: 1024px)
+      display: block
+
+    @media(min-width: 1900px)
+      padding-left: 80px
+
+  &__title
+    font-family: $main-font
+    font-weight: 400
+    font-size: 24px
+    line-height: 1.3
+    margin-bottom: 30px
+
+    @media(min-width: 1350px)
+      font-size: 34px
+
+    @media(min-width: 1900px)
+      font-size: 40px
+      margin-bottom: 55px
+
+  &__text
+    font-size: 16px
+    line-height: 1.3
+    margin-bottom: 30px
+
+    @media(min-width: 1900px)
+      font-size: 24px
+      margin-bottom: 55px
+
+  &__form
+    box-shadow: 0 0 14px 0 rgba(#000, 0.16)
+    border-radius: 50px
+    overflow: hidden
+    max-width: 445px
+    margin-bottom: 30px
+    position: relative
+
+    @media(min-width: 1900px)
+      margin-bottom: 55px
+      max-width: 536px
+
+  &__form-input
+    background-color: #fff
+    border: none
+    border-radius: 50px
+    font-size: 16px
+    height: 50px
+    padding-left: 18px
+    padding-right: 118px
+    width: 100%
+
+    @media(min-width: 1900px)
+      font-size: 22px
+      height: 55px
+      padding-left: 36px
+      padding-right: 186px
+
+    &:focus
+      outline: none
+
+  &__form-submit
+    background-color: #91bc64
+    border: none
+    border-radius: 50px
+    color: #fff
+    cursor: pointer
+    font-size: 16px
+    height: 100%
+    left: auto
+    padding: 0
+    position: absolute
+    right: 0
+    top: 0
+    transition: background-color 0.3s
+    width: 100px
+    z-index: 1
+
+    @media(min-width: 1900px)
+      font-size: 18px
+      width: 150px
+
+    &:hover,
+    &:focus
+      background-color: $main-color
+      color: #fff
+
+  &__link
+    align-items: center
+    background-color: #91bc64
+    border-radius: 10px
+    color: #fff
+    display: flex
+    font-size: 16px
+    font-weight: 500
+    height: 50px
+    justify-content: center
+    max-width: 300px
+    text-decoration: none
+    transition: background-color 0.3s
+
+    @media(min-width: 1900px)
+      font-size: 22px
+      height: 77px
+      max-width: 445px
+
+    &:hover,
+    &:focus
+      background-color: $main-color
+      color: #fff
+
+.shops-sections
+  margin-top: 70px
+  position: relative
+
+  @media(min-width: 1900px)
+    margin-top: 150px
+
+  &::before
+    @media(min-width: 1024px)
+      box-shadow: 0 0 400px 400px rgba(#91bc64, 0.3)
+      height: 0
+      content: ''
+      left: 50%
+      position: absolute
+      top: 50%
+      transform: translateX(-50%)
+      width: 0
+      z-index: -1
+
+.shop-section
+  line-height: 1.375
+
+  &:not(:last-child)
+    margin-bottom: 50px
+
+    @media(min-width: 1350px)
+      margin-bottom: 120px
+
+  @media(min-width: 1024px)
+    display: flex
+
+  @media(min-width: 1350px)
+    font-size: 18px
+
+  @media(min-width: 1900px)
+    font-size: 22px
+
+  &--reverse
+    flex-direction: row-reverse
+
+    .shop-section__title-block
+      background-position: 100% 100%
+      justify-content: flex-start
+
+      @media(min-width: 1024px)
+        margin-left: 40px
+        margin-right: -25px
+
+      @media(min-width: 1280px)
+        margin-left: 50px
+        margin-right: -50px
+        padding-right: 50px
+        padding-left: 50px
+
+  &__title-block
+    background-repeat: no-repeat
+    background-position: 0 100%
+    background-size: auto 70%
+    font-weight: 600
+    text-shadow: 0 0 5px #fff
+
+    align-items: center
+    background-color: #fff
+    box-shadow: 0 0 55px 0 rgba(#7e7e7e, 0.15)
+    display: flex
+    justify-content: flex-end
+    min-width: 60%
+    min-height: 180px
+
+    margin-left: -10px
+    margin-right: -10px
+    margin-bottom: 30px
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: 20px
+    padding-bottom: 20px
+
+    @media(min-width: 768px)
+      margin-left: -25px
+      margin-right: -25px
+      padding-left: 40px
+      padding-right: 40px
+
+    @media(min-width: 1024px)
+      margin-bottom: 0
+      margin-right: 40px
+
+    @media(min-width: 1280px)
+      background-size: auto 100%
+      margin-left: -50px
+      margin-right: 50px
+      padding-left: 50px
+      padding-right: 50px
+      padding-top: 50px
+      padding-bottom: 50px
+
+  &__title
+    font-family: $main-font
+    font-weight: 700
+    font-size: 24px
+    line-height: 1.3
+    margin-bottom: 10px
+
+    @media(min-width: 1024px)
+      font-size: 34px
+
+    @media(min-width: 1900px)
+      font-size: 40px
+
+  &__text-block
+    @media(min-width: 1024px)
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+  a
+    color: $text-color
+    font-weight: 700
+    text-decoration: none
+
+    &:hover,
+    &:focus
+      color: $main-color
+      text-decoration: underline

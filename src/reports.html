@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>One-shop - Отчётность</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/style.html
+</head>
+
+<body>
+
+    //= template/sprite.html
+
+    <div class="wrapper">
+
+        //= template/header.html
+
+        <div class="page-content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+                    <li class="breadcrumbs__item">Отчётность</li>
+                </ul>
+                <div class="page-columns">
+                    <div class="page-columns__left">
+                        <div class="js-sticky-block">
+                            <div class="js-selectbox selectbox">
+                                <div class="selectbox__value">2021</div>
+                                <ul id="float-nav" class="js-scroll-spy float-nav selectbox__list">
+                                    <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link" href="#1">2021</a></li>
+                                    <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link" href="#2">2020</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-columns__right">
+                        <h1>Финансовая отчетность</h1>
+
+                        <h2 id="1" class="h3">2021</h2>
+
+                        <a class="document" href="#" target="_blank">
+                            <svg class="document__icon" aria-hidden="true">
+                                <use xlink:href="#file" />
+                            </svg>
+                            <span>Годовой отчет 2021</span>
+                        </a>
+
+                        <h2 id="2" class="h3">2020</h2>
+
+                        <a class="document" href="#" target="_blank">
+                            <svg class="document__icon" aria-hidden="true">
+                                <use xlink:href="#file" />
+                            </svg>
+                            <span>Годовой отчет 2020</span>
+                        </a>
+
+                        <div style="height: 100vh"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    //= template/footer.html
+
+    //= template/scripts.html
+
+    <script src="js/jquery.sticky-kit.min.js"></script>
+    <script src="js/ddscrollspy.js"></script>
+    <script src="js/select-menu.js"></script>
+    <script>
+        $(document).ready(function() {
+            //превращаем меню в селект
+            if ($(".js-selectbox").length) {
+                if ($("body").width() < 1280) {
+                    $('.js-selectbox').selectbox();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

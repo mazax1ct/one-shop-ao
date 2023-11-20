@@ -1,0 +1,924 @@
+body
+  color: $text-color
+  font-family: $main-font
+  font-size: 12px
+  line-height: 16px
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+  @media(min-width: 768px)
+    font-size: 15px
+    line-height: 23px
+
+a
+  color: $main-color
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6
+  font-weight: 700
+  margin-top: 0
+
+  &:last-child
+    margin-bottom: 0
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+  font-family: $secondary-font
+
+h1,.h1,
+h2,.h2
+  font-size: 24px
+  line-height: 32px
+  margin-bottom: 18px
+
+h1,.h1
+  @media(min-width: 768px)
+    font-size: 42px
+    line-height: 54px
+    margin-bottom: 50px
+
+h2,.h2
+  @media(min-width: 768px)
+    font-size: 36px
+    line-height: 47px
+    margin-bottom: 40px
+
+h3,.h3
+  font-size: 18px
+  line-height: 24px
+  margin-bottom: 24px
+  margin-top: 24px
+
+  @media(min-width: 768px)
+    font-size: 24px
+    line-height: 32px
+    margin-bottom: 40px
+    margin-top: 40px
+
+  &:first-child
+    margin-top: 0
+
+h4,.h4,
+h5,.h5
+  font-family: $main-font
+
+h4,.h4,
+h5,.h5
+  font-size: 14px
+  line-height: 17px
+  margin-bottom: 20px
+
+  @media(min-width: 768px)
+    font-size: 18px
+    line-height: 25px
+    margin-bottom: 30px
+
+p,
+table
+  margin-top: 0
+  margin-bottom: 20px
+
+  @media(min-width: 1280px)
+    margin-bottom: 24px
+
+  &:last-child
+    margin-bottom: 0
+
+ul,
+ol
+  list-style: none
+  margin: 0
+  padding: 0
+
+ul
+  &:not([class])
+    margin-top: 40px
+    margin-bottom: 40px
+
+    @media(min-width: 768px)
+      padding-left: 45px
+
+    &:last-child
+      margin-bottom: 0
+
+    li
+      margin-bottom: 25px
+      padding-left: 27px
+      position: relative
+
+      &:last-child
+        margin-bottom: 0
+
+      &::before
+        background-color: $text-color
+        border-radius: 50%
+        content: ''
+        height: 10px
+        left: 0
+        position: absolute
+        top: 5px
+        width: 10px
+        z-index: 1
+
+ol
+  &:not([class])
+    counter-reset: myCounter
+    font-size: 15px
+    line-height: 23px
+    margin-top: 40px
+    margin-bottom: 40px
+
+    li
+      position: relative
+      padding-left: 35px
+
+      &:not(:last-child)
+        margin-bottom: 35px
+
+      &::before
+        counter-increment: myCounter
+        content: counter(myCounter)' /'
+        color: $main-color
+        font-family: $secondary-font
+        font-size: 20px
+        font-weight: 700
+        left: 0
+        position: absolute
+        top: 0
+
+.table-container
+  margin-bottom: 30px
+  margin-right: $margin-right-indent
+  overflow-x: auto
+
+  @media(min-width: 768px)
+    margin-right: $margin-right-indent-768
+    margin-bottom: 60px
+
+  @media(min-width: 1280px)
+    margin-right: 0
+
+.page-columns__right
+  .table-container
+    margin-bottom: 30px
+    margin-right: $margin-right-indent
+    overflow-x: auto
+
+    @media(min-width: 768px)
+      margin-right: $margin-right-indent-768
+      margin-bottom: 60px
+
+    @media(min-width: 1280px)
+      margin-right: $margin-right-indent-1280
+      margin-left: $margin-left-indent-1280
+
+    @media(min-width: 1600px)
+      margin-right: $margin-right-indent-1600
+      margin-left: $margin-left-indent-1600
+
+    @media(min-width: 1920px)
+      margin-right: 0
+
+table
+  border-collapse: collapse
+  max-width: 100%
+  text-align: left
+  width: 100%
+
+  th
+    color: #999
+    font-size: 10px
+    font-weight: 400
+    line-height: 12px
+    padding: 20px
+    text-align: left
+    vertical-align: top
+
+    @media(min-width: 768px)
+      font-size: 14px
+      line-height: 17px
+
+  td
+    border: 1px solid #DBDBDB
+    padding: 20px
+    vertical-align: middle
+
+  .filled
+    background-color: rgba(#4D8704, 0.3)
+
+img
+  height: auto
+  max-width: 100%
+  vertical-align: top
+
+hr
+  color: #D1D1D1
+  background-color: #D1D1D1
+  border: 0px none
+  height: 1px
+  margin-top: 25px
+  margin-bottom: 25px
+
+  @media(min-width: 768px)
+    margin-top: 40px
+    margin-bottom: 40px
+
+.serif
+  font-family: $secondary-font
+
+.text-block
+  max-width: 620px
+
+  @media(min-width: 1600px)
+    max-width: 680px
+
+.grey-block
+  background-color: #F1F3F5
+  margin-left: $margin-left-indent
+  margin-right: $margin-right-indent
+  margin-top: 35px
+  margin-bottom: 35px
+  padding: 50px 10px
+
+  @media(min-width: 768px)
+    margin-left: $margin-left-indent-768
+    margin-right: $margin-right-indent-768
+    padding-right: 25px
+    padding-left: 25px
+    padding-top: 90px
+    padding-bottom: 90px
+
+  @media(min-width: 1280px)
+    margin-left: $margin-left-indent-1280
+    margin-right: $margin-right-indent-1280
+    margin-bottom: 60px
+    margin-top: 60px
+    padding-right: 90px
+    padding-left: 90px
+
+  @media(min-width: 1600px)
+    margin-left: $margin-left-indent-1600
+    margin-right: 0
+
+  &--type_2
+    @media(min-width: 1280px)
+      padding-right: 100px
+      padding-left: 150px
+
+    @media(min-width: 1600px)
+      padding-right: 100px
+      padding-left: 160px
+
+  &:last-child
+    margin-bottom: 0
+
+  ol
+    &:not([class])
+      li
+        @media(min-width: 768px)
+          padding-left: 140px
+
+        &::before
+          @media(min-width: 768px)
+            font-size: 36px
+            top: 0.25em
+
+.fu-block
+  color: #335A00
+  font-family: $secondary-font
+  font-style: italic
+  font-size: 20px
+  line-height: 27px
+  margin: 35px auto
+  max-width: 645px
+  padding: 120px 0
+  position: relative
+  text-align: center
+
+  @media(min-width: 768px)
+    font-size: 28px
+    line-height: 36px
+
+  @media(min-width: 1280px)
+    margin-top: 50px
+    margin-bottom: 50px
+
+  &::before,
+  &::after
+    background-color: #335A00
+    content: ''
+    height: 90px
+    left: 50%
+    position: absolute
+    width: 1px
+    z-index: 1
+
+  &::before
+    top: 0
+
+  &::after
+    bottom: 0
+    top: auto
+
+  & + .fu-block-caption
+    margin-bottom: 50px
+    text-align: center
+
+.big-text
+  font-size: 14px
+  font-weight: 700
+  line-height: 20px
+  margin-bottom: 24px
+
+  @media(min-width: 768px)
+    font-size: 18px
+    line-height: 25px
+    margin-bottom: 40px
+
+.image-block
+  margin-left: 0
+  margin-right: 0
+  margin-top: 50px
+  margin-bottom: 50px
+
+  @media(min-width: 768px)
+    margin-top: 115px
+    margin-left: $margin-left-indent-768
+    margin-right: $margin-right-indent-768
+
+  @media(min-width: 1280px)
+    margin-top: 130px
+    margin-left: $margin-left-indent-1280
+    margin-right: $margin-right-indent-1280
+
+  @media(min-width: 1600px)
+    margin-left: $margin-left-indent-1600
+    margin-right: 0
+
+  &__caption-block
+    @media(min-width: 768px)
+      align-items: flex-start
+      display: flex
+
+  &__caption
+    font-size: 14px
+    font-weight: 600
+    font-style: italic
+    margin-bottom: 25px
+    position: relative
+    padding-bottom: 25px
+
+    &::after
+      background-color: #000
+      bottom: 0
+      content: ''
+      height: 1px
+      left: 0
+      position: absolute
+      top: auto
+      width: 215px
+      z-index: 1
+
+      @media(min-width: 768px)
+        left: 25px
+
+      @media(min-width: 1280px)
+        left: 0
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      padding-left: 25px
+      padding-right: 25px
+      width: 50%
+
+    @media(min-width: 1280px)
+      padding-left: 0
+
+  &__description
+    font-size: 15px
+    line-height: 23px
+
+    @media(min-width: 768px)
+      margin-left: auto
+      max-width: 450px
+      padding-left: 25px
+      padding-right: 25px
+      width: 50%
+
+    @media(min-width: 1280px)
+      padding-right: 50px
+
+    @media(min-width: 1600px)
+      padding-right: 0
+
+    a
+      font-family: $secondary-font
+      font-style: italic
+
+.fu-block2
+  margin-top: 70px
+  margin-bottom: 70px
+
+  @media(min-width: 768px)
+    align-items: center
+    display: flex
+
+  @media(min-width: 1280px)
+    margin-left: $margin-left-indent-1280
+
+  @media(min-width: 1600px)
+    margin-left: $margin-left-indent-1600
+
+  &__image
+    margin-bottom: 45px
+    padding-left: 50px
+    padding-right: 50px
+    text-align: center
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      min-width: 29.25%
+      padding-left: 0
+      padding-right: 25px
+      width: 29.25%
+
+    @media(min-width: 1280px)
+      min-width: 250px
+      max-width: 250px
+      text-align: left
+      width: 250px
+
+    @media(min-width: 1600px)
+      min-width: 275px
+      max-width: 275px
+      width: 275px
+
+    img
+      max-width: 185px
+
+  &__text
+    border-top: 3px solid #000
+    border-bottom: 3px solid #000
+    font-family: $secondary-font
+    font-style: italic
+    font-size: 24px
+    line-height: 32px
+    margin: 0
+    max-width: 645px
+    padding: 75px 0 45px
+    position: relative
+    text-align: center
+
+    @media(min-width: 768px)
+      padding-left: 62px
+      padding-right: 62px
+
+    @media(min-width: 1280px)
+      padding-left: 68px
+      padding-right: 68px
+
+    &::before,
+    &::after
+      font-size: 55px
+      line-height: 70px
+      position: absolute
+
+    &::before
+      content: '«'
+      left: 0
+      top: 0
+
+      @media(min-width: 768px)
+        top: 48px
+
+    &::after
+      bottom: 0
+      content: '»'
+      left: auto
+      right: 10px
+      top: auto
+
+      @media(min-width: 768px)
+        bottom: 48px
+
+.fu-block3
+  margin-top: 70px
+  margin-bottom: 70px
+
+  @media(min-width: 768px)
+    display: flex
+
+  @media(min-width: 1280px)
+    align-items: center
+    margin-left: $margin-left-indent-1280
+
+  @media(min-width: 1600px)
+    margin-left: $margin-left-indent-1600
+
+  &__image
+    @media(min-width: 768px)
+      padding-right: 12px
+      width: 50%
+
+    @media(min-width: 1280px)
+      padding-right: 35px
+
+    .image-block
+      margin: 0
+
+    .image-block__caption
+      padding-left: 0
+      padding-right: 0
+      width: 100%
+
+      &::after
+        left: 0
+
+  &__text
+    @media(min-width: 768px)
+      padding-left: 12px
+      width: 50%
+
+    @media(min-width: 1280px)
+      padding-left: 35px
+
+.video-block
+  margin-top: 75px
+  margin-bottom: 75px
+
+  @media(min-width: 768px)
+    align-items: center
+    display: flex
+    margin-left: $margin-left-indent-768
+    padding-top: 60px
+    padding-bottom: 60px
+    position: relative
+
+  @media(min-width: 1280px)
+    margin-left: $margin-left-indent-1280
+    margin-right: $margin-right-indent-1280
+    padding-top: 100px
+    padding-bottom: 50px
+
+  @media(min-width: 1600px)
+    margin-left: $margin-left-indent-1600
+    margin-right: 0
+
+  &::after
+    @media(min-width: 768px)
+      background-color: #F1F3F5
+      content: ''
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 79.42708%
+
+    @media(min-width: 1280px)
+      height: calc(100% - 100px)
+      top: 100px
+
+  &__text
+    background-color: #F1F3F5
+    padding: 20px 20px 35px
+
+    @media(min-width: 768px)
+      padding-right: 25px
+      padding-top: 0
+      padding-bottom: 0
+      position: relative
+      width: 46.37884%
+      z-index: 1
+
+    @media(min-width: 1280px)
+      padding-left: 75px
+      width: 32.24044%
+
+  &__video
+    @media(min-width: 768px)
+      padding-left: 25px
+      position: relative
+      width: 53.62116%
+      z-index: 1
+
+    @media(min-width: 1280px)
+      margin-top: -100px
+      width: 67.75956%
+
+  &__caption
+    font-size: 14px
+    font-weight: 600
+    font-style: italic
+    margin-top: 20px
+    position: relative
+    padding-bottom: 25px
+
+    &::after
+      background-color: #000
+      bottom: 0
+      content: ''
+      height: 1px
+      left: 0
+      position: absolute
+      top: auto
+      width: 215px
+      z-index: 1
+
+.video
+  display: inline-block
+  position: relative
+  vertical-align: top
+
+  &::after
+    background-color: rgba(#000,0.5)
+    background-image: url("data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23fff' opacity='0.8' d='M26,16L6,31.5v-31L26,16z'/%3E%3C/svg%3E")
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: 20px auto
+    border-radius: 50%
+    content: ''
+    height: 35px
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    width: 35px
+    z-index: 1
+
+    @media(min-width: 768px)
+      height: 64px
+      width: 64px
+
+    @media(min-width: 1600px)
+      background-size: 32px auto
+      height: 70px
+      width: 70px
+
+.fu-block4
+  @media(min-width: 768px)
+    align-items: center
+    display: flex
+    justify-content: space-between
+    margin-top: 70px
+    margin-bottom: 70px
+
+  &__text
+    @media(min-width: 768px)
+      max-width: 705px
+      padding-right: 25px
+
+  &__link-block
+    margin-top: 70px
+    margin-bottom: 70px
+
+    @media(min-width: 768px)
+      margin: 0
+
+.download-link
+  display: block
+  margin-left: auto
+  margin-right: auto
+  min-width: 250px
+  text-decoration: none
+  width: 250px
+
+  &:hover
+    .download-link__icon
+      fill: $main-color
+
+  &__title
+    color: #376006
+    display: block
+    font-family: $secondary-font
+    font-style: italic
+    margin-bottom: 20px
+    text-align: center
+
+    @media(min-width: 768px)
+      font-size: 18px
+
+  &__icon-block
+    align-items: center
+    display: flex
+    justify-content: space-between
+
+    &::before,
+    &::after
+      background-color: #000
+      content: ''
+      display: block
+      height: 1px
+      width: 80px
+
+  &__icon
+    fill: #000
+    height: 34px
+    transition: fill 0.3s
+    width: 34px
+
+.single-image
+  margin-left: 0
+  margin-right: 0
+  margin-top: 50px
+  margin-bottom: 50px
+
+  &__caption
+    font-size: 14px
+    font-weight: 600
+    font-style: italic
+    margin-bottom: 25px
+    position: relative
+    padding-bottom: 25px
+
+    &::after
+      background-color: #000
+      bottom: 0
+      content: ''
+      height: 1px
+      left: 0
+      position: absolute
+      top: auto
+      width: 215px
+      z-index: 1
+
+.images-tile
+  margin-top: 40px
+  margin-bottom: 40px
+
+  @media(min-width: 1280px)
+    margin-left: $margin-left-indent-1280
+
+  @media(min-width: 1600px)
+    margin-left: $margin-left-indent-1600
+
+  &__list
+    @media(min-width: 768px)
+      align-items: flex-end
+      display: flex
+      margin-left: -25px
+      margin-right: -25px
+
+    @media(min-width: 1280px)
+      margin-left: -37px
+      margin-right: -37px
+
+  &:last-child
+    margin-bottom: 0
+
+  &__item
+    margin-bottom: 40px
+
+    &:first-child
+      padding-right: 70px
+
+      @media(min-width: 768px)
+        padding-right: 25px
+        padding-bottom: 74px
+
+      @media(min-width: 1280px)
+        padding-right: 37px
+
+    &:last-child
+      margin-bottom: 0
+      padding-right: 70px
+
+      @media(min-width: 768px)
+        padding-right: 25px
+        padding-bottom: 44px
+
+      @media(min-width: 1280px)
+        padding-right: 37px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      padding-left: 25px
+      padding-right: 25px
+      width: 33.33333%
+
+    @media(min-width: 1280px)
+      padding-left: 37px
+      padding-right: 37px
+
+.image-block2
+  margin-top: 30px
+  margin-bottom: 30px
+
+  @media(min-width: 768px)
+    display: flex
+    margin-top: 60px
+    margin-bottom: 60px
+
+  @media(min-width: 1280px)
+    margin-left: $margin-left-indent-1280
+    position: relative
+
+  @media(min-width: 1600px)
+    margin-left: $margin-left-indent-1600
+
+  &__main
+    @media(min-width: 1280px)
+      max-width: 920px
+
+  &__second
+    display: none
+
+    @media(min-width: 768px)
+      display: block
+      min-width: 21%
+      padding-right: 25px
+      width: 21%
+
+    @media(min-width: 1280px)
+      left: -26.2%
+      min-width: 200px
+      position: absolute
+      padding-right: 0
+      top: 0
+      width: 200px
+
+    @media(min-width: 1600px)
+      left: -28.8%
+
+    @media(min-width: 1900px)
+      left: -29.6%
+
+.example-title
+  border-bottom: 1px solid #212121
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='24' viewBox='0 0 21 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.000453949 17.945L14.1605 12.041L0.000453949 6.13695V0.376953L20.0645 9.06495V15.065L0.000453949 23.705V17.945Z' fill='%23335A00'/%3E%3C/svg%3E%0A")
+  background-repeat: no-repeat
+  background-position: 0 0
+  color: #335A00
+  font-size: 14px
+  font-weight: 700
+  line-height: 17px
+  padding-left: 40px
+  padding-top: 3px
+  padding-bottom: 20px
+
+  @media(min-width: 768px)
+    font-size: 24px
+    margin-bottom: 35px
+
+.fu-block5
+  @media(min-width: 768px)
+    display: flex
+
+  &__item
+    &:not(:last-child)
+      margin-bottom: 20px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      width: 50%
+
+    &:first-child
+      @media(min-width: 768px)
+        padding-right: 25px
+
+      @media(min-width: 128px)
+        padding-right: 50px
+
+    &:last-child
+      @media(min-width: 768px)
+        padding-left: 25px
+
+      @media(min-width: 1280px)
+        padding-left: 50px
+
+.required
+  color: #FF121D
+
+.document
+  align-items: center
+  border: 1px solid #EBEDF0
+  background-color: #F4F6F9
+  color: $text-color
+  display: flex
+  font-weight: 600
+  margin-bottom: 4px
+  margin-left: $margin-left-indent
+  margin-right: $margin-right-indent
+  padding: 24px
+
+  @media(min-width: 768px)
+    margin-left: 0
+    margin-right: $margin-right-indent-768
+
+  @media(min-width: 1280px)
+    margin-right: $margin-right-indent-1280
+
+  @media(min-width: 1600px)
+    margin-right: $margin-right-indent-1600
+    padding: 40px
+
+  &__icon
+    fill: $text-color
+    height: 34px
+    min-width: 30px
+    margin-right: 24px
+    width: 30px

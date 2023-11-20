@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>One-shop - Главная</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/style.html
+
+    <link rel="stylesheet" href="css_include_once/aos.css" />
+    <link rel="stylesheet" href="css_include_once/cookie-popover.css" />
+</head>
+
+<body class="main-page">
+
+    //= template/sprite.html
+
+    <div class="wrapper">
+
+        //= template/header.html
+
+        <div class="page-content">
+            <div class="container">
+                //= template/main-page/privilege.html
+
+                //= template/main-page/about-company.html
+
+                //= template/main-page/advantage.html
+            </div>
+        </div>
+    </div>
+
+    //= template/footer.html
+
+    //= template/cookie-popover.html
+
+    //= template/scripts.html
+
+    <script type="text/javascript" src="js/aos.js"></script>
+
+    <script>
+        if ($('body').width() > 767) {
+            AOS.init();
+        }
+    </script>
+
+    <script>
+        function getMyCookie(name) {
+            var matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
+
+        function showCookiePopover() {
+            var cookieShowed = getMyCookie("COOKIE_POPOVER");
+            if (cookieShowed != "Y") {
+                $('.cookie-popover').addClass('is-open');
+            }
+        }
+
+        $(document).ready(function() {
+            setTimeout(showCookiePopover, 1000);
+        });
+
+        $(document).on("click", '.js-cookie-popover-closer', function() {
+            $('.cookie-popover').removeClass('is-open');
+            var date = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 7);
+            document.cookie = "COOKIE_POPOVER=Y; path=/; expires=" + date.toUTCString();
+            return false;
+        });
+    </script>
+</body>
+
+</html>

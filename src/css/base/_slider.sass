@@ -1,0 +1,72 @@
+.slider-block
+  margin-top: 35px
+  margin-bottom: 35px
+
+  &__top
+    display: flex
+    justify-content: space-between
+    margin-bottom: 25px
+
+  &__title
+    font-size: 14px
+    font-weight: 700
+    line-height: 17px
+    margin-bottom: 0
+    max-width: 50%
+    width: 50%
+
+  &__counter
+    color: #777
+    display: flex
+    justify-content: flex-end
+    text-align: right
+    width: 50%
+
+  &__counter-current,
+  &__counter-separator
+    font-size: 28px
+    line-height: 34px
+
+  &__counter-current
+    color: $main-color
+
+  &__counter-separator
+    margin-left: 15px
+    margin-right: 15px
+
+  &__counter-all
+    font-size: 16px
+    line-height: 28px
+
+  &__arrows
+    display: flex
+    margin-top: 20px
+
+.slider
+  @media(min-width: 1280px)
+    margin-left: $margin-left-indent-1280
+    margin-right: $margin-right-indent-1280
+
+  @media(min-width: 1600px)
+    margin-left: $margin-left-indent-1600
+    margin-right: $margin-right-indent-1600
+
+  @media(min-width: 1900px)
+    margin-right: 0
+
+  &__item
+    padding-right: 10px
+    width: 255px
+
+    @media(min-width: 768px)
+      padding-right: 25px
+
+    @media(min-width: 1280px)
+      padding-right: 35px
+      width: 375px
+
+    @media(min-width: 1600px)
+      width: 420px
+
+    @media(min-width: 1900px)
+      width: 455px

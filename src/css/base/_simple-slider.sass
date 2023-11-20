@@ -1,0 +1,41 @@
+.simple-slider-block
+  max-width: 920px
+  margin-top: 35px
+  margin-bottom: 35px
+
+  @media(min-width: 1280px)
+    margin-left: $margin-left-indent-1280
+
+  @media(min-width: 1600px)
+    margin-left: $margin-left-indent-1600
+
+  &__bottom
+    align-items: center
+    display: flex
+    justify-content: space-between
+    margin-top: 25px
+
+  &__counter
+    color: #777
+    display: flex
+    justify-content: flex-end
+    margin-bottom: 0
+
+  &__counter-current,
+  &__counter-separator
+    font-size: 28px
+    line-height: 34px
+
+  &__counter-current
+    color: $main-color
+
+  &__counter-separator
+    margin-left: 15px
+    margin-right: 15px
+
+  &__counter-all
+    font-size: 16px
+    line-height: 28px
+
+.simple-slider
+  max-width: 920px

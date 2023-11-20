@@ -1,0 +1,84 @@
+.docs-block
+  background-color: #F4F6F9
+  margin-left: $margin-left-indent
+  margin-right: $margin-right-indent
+  padding: 40px 45px
+
+  @media(min-width: 768px)
+    margin-left: $margin-left-indent-768
+    margin-right: $margin-right-indent-768
+    padding: 80px 50px
+
+  @media(min-width: 1280px)
+    margin-left: $margin-left-indent-1280
+    margin-right: $margin-right-indent-1280
+
+  @media(min-width: 1600px)
+    margin-left: $margin-left-indent-1600
+    margin-right: $margin-right-indent-1600
+
+  @media(min-width: 1900px)
+    margin-right: 0
+
+.docs-list
+  margin-bottom: -30px
+
+  @media(min-width: 768px)
+    display: flex
+    flex-wrap: wrap
+    margin-left: -15px
+    margin-right: -15px
+
+  &__item
+    margin-bottom: 30px
+
+    @media(min-width: 768px)
+      padding-left: 15px
+      padding-right: 15px
+      width: 33.33333%
+
+    @media(min-width: 1280px)
+      width: 25%
+
+.more-block
+  font-size: 14px
+  font-weight: 700
+  margin-top: 40px
+  text-align: center
+
+  @media(min-width: 768px)
+    font-size: 16px
+    margin-top: 60px
+
+  &__button
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid $main-color
+    color: #000
+    cursor: pointer
+    display: inline-block
+    padding: 5px 0
+    text-decoration: none
+
+.download-docs
+  list-style: none
+  margin: 0
+  padding: 0
+
+  li
+    margin-bottom: 20px
+
+.download-doc
+  background-image: url("data:image/svg+xml,%3Csvg width='33' height='36' viewBox='0 0 33 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.3335 19.0854V1H1V32.7075H20.9517' stroke='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23.842 22.0723H27.6213V28.896H31.157L25.8129 35L20.4688 28.896H23.842V22.0723Z' stroke='black'/%3E%3Cpath d='M6.80664 12.5366H19.3037' stroke='black'/%3E%3Cpath d='M6.80664 17.2314H15.667' stroke='black'/%3E%3Cpath d='M6.80664 21.2314H19.3037' stroke='black'/%3E%3C/svg%3E%0A")
+  background-size: 31px 34px
+  background-repeat: no-repeat
+  background-position: 0 0
+  color: #000
+  display: inline-block
+  min-height: 34px
+  padding-left: 50px
+  padding-top: 3px
+  text-decoration: none
+
+  &__text
+    border-bottom: 1px solid $main-color

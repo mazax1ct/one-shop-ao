@@ -1,0 +1,679 @@
+.catalog-filter
+  align-items: center
+  border-top: 1px solid #000
+  display: flex
+  flex-direction: column
+  margin-bottom: 25px
+  padding-top: 30px
+
+  @media(min-width: 768px)
+    flex-direction: row
+    flex-wrap: wrap
+    padding-top: 25px
+
+.pager
+  display: flex
+  flex-wrap: wrap
+
+  &__item
+    &:not(:last-child)
+      margin-right: 15px
+
+  &__link
+    align-items: center
+    border: 1px solid #BFBFBF
+    color: #000
+    display: flex
+    height: 35px
+    justify-content: center
+    text-decoration: none
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s
+    width: 35px
+
+    &:hover,
+    &:focus,
+    &.is-active
+      background-color: $main-color
+      border-color: $main-color
+      color: #fff
+
+      .pager__icon
+        fill: #fff
+
+    &.disabled
+      background-color: transparent
+      border-color: #BFBFBF
+
+      .pager__icon
+        fill: rgba(#000, 0.4)
+
+  &__icon
+    fill: #000
+    height: 12px
+    transition: fill 0.3s
+    width: 12px
+
+.catalog-view-block
+  align-items: center
+  display: none
+  flex-wrap: wrap
+
+  @media(min-width: 768px)
+    display: flex
+    margin-left: auto
+
+.catalog-view
+  align-items: center
+  border: 1px solid transparent
+  background-color: transparent
+  cursor: pointer
+  display: flex
+  height: 35px
+  justify-content: center
+  margin-left: 10px
+  padding: 0
+  transition: border-color 0.3s
+  width: 35px
+
+  &:hover,
+  &:focus,
+  &.is-active
+    border-color: #BFBFBF
+
+  &.is-active
+    .catalog-view__icon
+      fill: #000
+
+  &__icon
+    fill: rgba(#000, 0.4)
+    height: 19px
+    transition: fill 0.3s
+    width: 19px
+
+.show-qnt
+  align-items: center
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 15px
+  order: -1
+
+  @media(min-width: 768px)
+    margin-bottom: 0
+    margin-left: 80px
+    order: 0
+
+  &__button
+    align-items: center
+    border: 1px solid transparent
+    color: #000
+    display: flex
+    height: 35px
+    justify-content: center
+    margin-left: 5px
+    transition: border-color 0.3s
+    text-decoration: none
+    width: 35px
+
+    &:hover,
+    &:focus,
+    &.is-active
+      border-color: #BFBFBF
+
+.catalog-list
+  &--type_1
+    @media(min-width: 768px)
+      display: flex
+      flex-wrap: wrap
+      margin-left: -10px
+      margin-right: -10px
+
+    @media(min-width: 1600px)
+      margin-left: -15px
+      margin-right: -15px
+
+    .catalog-list__item
+      @media(min-width: 768px)
+        padding-left: 10px
+        padding-right: 10px
+        width: 50%
+
+      @media(min-width: 992px)
+        width: 33.33333%
+
+      @media(min-width: 1600px)
+        margin-bottom: 30px
+        padding-left: 15px
+        padding-right: 15px
+
+    .catalog-item
+      display: flex
+      flex-direction: column
+      height: 100%
+      position: relative
+      padding: 35px 35px 20px
+      text-align: center
+
+      @media(min-width: 1400px)
+        padding-left: 20px
+        padding-right: 20px
+
+    .catalog-item__info
+      flex-grow: 1
+
+    .catalog-item__labels
+      left: auto
+      position: absolute
+      right: 10px
+      top: 10px
+      z-index: 1
+
+    .catalog-item__image
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 18px
+
+    .catalog-item__title
+      margin-bottom: 6px
+
+    .catalog-item__description
+      margin-bottom: 15px
+
+    .catalog-item__buy-block
+      @media(min-width: 1400px)
+        align-items: center
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+    .catalog-item__price
+      margin-bottom: 15px
+
+      @media(min-width: 1400px)
+        margin-bottom: 25px
+        width: 100%
+
+    .catalog-item__quantity
+      margin-bottom: 24px
+      margin-left: auto
+      margin-right: auto
+
+      @media(min-width: 1400px)
+        margin: 0
+
+    .catalog-item__button
+      min-width: 170px
+
+      @media(min-width: 1400px) and (max-width: 1599px)
+        min-width: 0
+
+  &--type_2
+    .catalog-list__item
+      max-width: 830px
+
+      @media(min-width: 768px)
+        margin-bottom: 16px
+
+    .catalog-item
+      display: flex
+      flex-direction: column
+      justify-content: center
+      min-height: 275px
+      padding: 45px 25px 45px 250px
+      position: relative
+
+      @media(min-width: 1280px)
+        padding-left: 300px
+        padding-right: 45px
+
+    .catalog-item__info
+      margin-bottom: 32px
+
+    .catalog-item__labels
+      left: auto
+      position: absolute
+      right: 25px
+      top: 20px
+      z-index: 1
+
+      @media(min-width: 1280px)
+        right: 45px
+
+    .catalog-item__image
+      left: 25px
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 180px
+
+      @media(min-width: 1280px)
+        left: 45px
+        width: 244px
+
+    .catalog-item__title
+      margin-bottom: 12px
+
+    .catalog-item__description
+      margin-bottom: 0
+
+    .catalog-item__buy-block
+      align-items: center
+      display: flex
+      justify-content: space-between
+
+    .catalog-item__price
+      margin-bottom: 0
+
+    .catalog-item__button
+      @media(min-width: 870px)
+        min-width: 170px
+
+  &--type_3
+    .catalog-item
+      align-items: center
+      display: flex
+      justify-content: space-between
+      padding: 25px 15px 25px 115px
+      position: relative
+
+      @media(min-width: 1280px)
+        padding-left: 160px
+        padding-right: 45px
+
+    .catalog-item__info
+      padding-right: 20px
+
+    .catalog-item__labels
+      left: 115px
+      position: absolute
+      top: 0
+
+      @media(min-width: 1280px)
+        left: 160px
+
+    .catalog-item__image
+      left: 15px
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 80px
+
+      @media(min-width: 1280px)
+        left: 45px
+
+    .catalog-item__title
+      margin-bottom: 0
+
+      @media(min-width: 1280px)
+        min-width: 230px
+        width: 230px
+
+      @media(min-width: 1600px)
+        min-width: 370px
+        width: 370px
+
+    .catalog-item__description
+      display: none
+
+    .catalog-item__buy-block
+      align-items: center
+      display: flex
+      justify-content: space-between
+
+      @media(min-width: 1280px)
+        flex-grow: 1
+
+    .catalog-item__price
+      margin-bottom: 0
+      margin-right: 10px
+
+    .catalog-item__quantity
+      margin-right: 10px
+      order: -1
+
+    .catalog-item__button
+      min-width: 160px
+
+      @media(min-width: 1600px)
+        min-width: 170px
+
+  &__item
+    margin-bottom: 10px
+
+.catalog-item
+  border: 1px solid #DCDCDC
+
+  &__labels
+    display: flex
+
+  &__label
+    background-color: #FF121D
+    color: #fff
+    font-size: 14px
+    font-weight: 700
+    line-height: 17px
+    padding: 4px 9px
+
+    &:not(:last-child)
+      margin-right: 5px
+
+  &__title
+    display: block
+    font-size: 16px
+
+    a
+      color: $text-color
+      text-decoration: none
+
+      img
+        transform: scale(1)
+        transition: transform 0.3s
+
+      &:hover,
+      &:focus
+        text-decoration: underline
+
+        img
+          transform: scale(1.05)
+
+  &__description
+    color: #666
+    font-size: 12px
+    line-height: 15px
+
+  &__image
+    display: block
+    max-width: 244px
+
+  &__price
+    color: #335A00
+    font-size: 24px
+    font-weight: 700
+    line-height: 29px
+    white-space: nowrap
+
+  &__button
+    background-color: #335A00
+    border: 1px solid #335A00
+    border-radius: 0
+    color: #fff
+    cursor: pointer
+    display: inline-block
+    font-family: $main-font
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px
+    min-height: 50px
+    min-width: 130px
+    overflow: hidden
+    padding: 14px 15px
+    position: relative
+    transition: background-color 0.3s, border-color 0.3s
+    text-decoration: none
+    text-align: center
+    vertical-align: middle
+
+    &:hover,
+    &:focus
+      background-color: darken(#335A00, 5%)
+      border-color: darken(#335A00, 5%)
+
+    &.disabled
+      background-color: #C5C5C5
+      border-color: #C5C5C5
+      cursor: default
+
+      &:hover,
+      &:focus
+        background-color: #C5C5C5
+        border-color: #C5C5C5
+
+.quantity
+  display: flex
+  width: 105px
+
+  &__button
+    align-items: center
+    background-color: transparent
+    border: 1px solid #D1D1D1
+    border-radius: 3px
+    cursor: pointer
+    display: flex
+    height: 35px
+    justify-content: center
+    padding: 0
+    transition: background-color 0.3s
+    width: 35px
+
+    &:hover,
+    &:focus
+      background-color: #D1D1D1
+
+  &__input
+    border: none
+    background-color: transparent
+    font-size: 16px
+    height: 35px
+    padding: 0
+    text-align: center
+    width: 35px
+
+  &__button-icon
+    fill: #335A00
+    height: 10px
+    width: 10px
+
+.catalog-bottom
+  align-items: center
+  display: flex
+  justify-content: space-between
+  margin-top: 25px
+
+.go-top
+  align-items: center
+  border: 1px solid #BFBFBF
+  background-color: transparent
+  display: flex
+  height: 50px
+  justify-content: center
+  transition: background-color 0.3s, border-color 0.3s
+  text-decoration: none
+  width: 50px
+
+  &:hover,
+  &:focus
+    background-color: $main-color
+    border-color: $main-color
+    color: #fff
+
+    .pager__icon
+      fill: #fff
+
+  &__icon
+    fill: #000
+    height: 16px
+    transition: fill 0.3s
+    width: 16px
+
+.catalog-detail
+  margin-bottom: 40px
+
+  @media(min-width: 768px)
+    display: flex
+    margin-bottom: 60px
+
+  @media(min-width: 1280px)
+    max-width: 1050px
+
+  @media(min-width: 1400px)
+    margin-left: auto
+    margin-right: auto
+
+  &__image-block
+    max-width: 450px
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+      width: 50%
+
+  &__image
+    border: 1px solid #D1D1D1
+    height: 0
+    padding-bottom: 100%
+    position: relative
+
+    img
+      left: 50%
+      max-width: 290px
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+
+  &__info
+    @media(min-width: 768px)
+      padding-left: 30px
+      width: 50%
+
+    @media(min-width: 1280px)
+      flex-grow: 1
+      padding-left: 100px
+
+  &__label
+    background-color: #FF121D
+    color: #fff
+    display: inline-block
+    font-size: 14px
+    font-weight: 700
+    line-height: 17px
+    margin-bottom: 20px
+    padding: 4px 9px
+    vertical-align: top
+
+  &__title
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      font-size: 36px
+      line-height: 48px
+      margin-bottom: 30px
+
+    @media(min-width: 1280px)
+      margin-bottom: 40px
+
+  &__producer
+    span
+      color: #848484
+      margin-right: 50px
+
+  &__buy-block
+    align-items: center
+    border-top: 1px solid #D1D1D1
+    display: flex
+    flex-wrap: wrap
+    padding-top: 20px
+
+    @media(min-width: 992px)
+      justify-content: space-between
+
+  &__price
+    color: #335A00
+    font-size: 24px
+    font-weight: 700
+    line-height: 29px
+    margin-bottom: 20px
+    margin-right: 20px
+    white-space: nowrap
+
+  &__quantity
+    margin-right: 20px
+    margin-bottom: 20px
+
+  &__button
+    background-color: #335A00
+    border: 1px solid #335A00
+    border-radius: 0
+    color: #fff
+    cursor: pointer
+    display: inline-block
+    font-family: $main-font
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px
+    min-height: 50px
+    min-width: 170px
+    margin-bottom: 20px
+    overflow: hidden
+    padding: 14px 15px
+    position: relative
+    transition: background-color 0.3s, border-color 0.3s
+    text-decoration: none
+    text-align: center
+    vertical-align: middle
+
+    &:hover,
+    &:focus
+      background-color: darken(#335A00, 5%)
+      border-color: darken(#335A00, 5%)
+
+    &.disabled
+      background-color: #C5C5C5
+      border-color: #C5C5C5
+      cursor: default
+
+      &:hover,
+      &:focus
+        background-color: #C5C5C5
+        border-color: #C5C5C5
+
+.catalog-description
+  margin-bottom: 40px
+
+  @media(min-width: 1280px)
+    margin-bottom: 90px
+
+.comments-form
+  max-width: 930px
+
+  &:not(:last-child)
+    margin-bottom: 50px
+
+  &__row
+    @media(min-width: 768px)
+      display: flex
+      margin-left: -15px
+      margin-right: -15px
+
+  &__row-item
+    margin-bottom: 30px
+
+    @media(min-width: 768px)
+      padding-left: 15px
+      padding-right: 15px
+      width: 50%
+
+  &__button-block
+    margin-top: 30px
+
+    .button
+      height: 55px
+      min-width: 240px
+
+.comments-item
+  border-bottom: 1px solid #D1D1D1
+  padding-bottom: 20px
+
+  &:not(:last-child)
+    margin-bottom: 20px
+
+  &__title-block
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+
+  &__title
+    font-size: 16px
+    font-weight: 700
+    margin-bottom: 10px
+
+  &__date
+    font-size: 12px

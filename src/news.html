@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>One-shop - Новости</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/style.html
+</head>
+
+<body>
+
+    //= template/sprite.html
+
+    <div class="wrapper">
+
+        //= template/header.html
+
+        <div class="page-content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+                    <li class="breadcrumbs__item">Новости</li>
+                </ul>
+                <div class="page-columns">
+                    <div class="page-columns__left">
+                        <div class="js-sticky-block">
+                            <div class="js-selectbox selectbox">
+                                <div class="selectbox__value">Новости</div>
+                                <ul id="float-nav" class="float-nav selectbox__list">
+                                    <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link selected" href="#">Новости</a></li>
+                                    <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link" href="#">Архив новостей</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="js-content-with-sticky page-columns__right">
+                        <div class="news">
+                            <h1>Новости</h1>
+                            <div class="news__list">
+                                <div class="news__item">
+                                    <div class="news-item">
+                                        <a class="news-item__link" href="news-detail.html">
+                                            <span class="news-item__image"><img src="images/content/news/default.jpg" alt=""></span>
+                                            <span class="news-item__date">23 Февраля 2022</span>
+                                            <span class="news-item__title">С Днем защитника Отечества!</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news__item">
+                                    <div class="news-item">
+                                        <a class="news-item__link" href="news-detail.html">
+                                            <span class="news-item__image"><img src="images/content/news/img_1.jpg" alt=""></span>
+                                            <span class="news-item__date">22 Февраля 2022</span>
+                                            <span class="news-item__title">Вдохновение от Лидеров OneSW: Ирина Бекасова</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news__item">
+                                    <div class="news-item">
+                                        <a class="news-item__link" href="news-detail.html">
+                                            <span class="news-item__image"><img src="images/content/news/default.jpg" alt=""></span>
+                                            <span class="news-item__date">22 Февраля 2022</span>
+                                            <span class="news-item__title">В воскресенье One Shop Продукты в Рубцовске отметит годовщину со дня ребрендинга</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news__item">
+                                    <div class="news-item">
+                                        <a class="news-item__link" href="news-detail.html">
+                                            <span class="news-item__image"><img src="images/content/news/default.jpg" alt=""></span>
+                                            <span class="news-item__date">22 Февраля 2022</span>
+                                            <span class="news-item__title">Изменения в графике работы Центрального офиса Компании</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news__item">
+                                    <div class="news-item">
+                                        <a class="news-item__link" href="news-detail.html">
+                                            <span class="news-item__image"><img src="images/content/news/img_2.jpg" alt=""></span>
+                                            <span class="news-item__date">01 апреля 2019</span>
+                                            <span class="news-item__title">Вместе с компанией OneShop Вы прикоснетесь к миру больших денег</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news__item">
+                                    <div class="news-item">
+                                        <a class="news-item__link" href="news-detail.html">
+                                            <span class="news-item__image"><img src="images/content/news/img_2.jpg" alt=""></span>
+                                            <span class="news-item__date">01 апреля 2019</span>
+                                            <span class="news-item__title">Вместе с компанией OneShop Вы прикоснетесь к миру больших денег</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="news__item">
+                                    <div class="news-item">
+                                        <a class="news-item__link" href="news-detail.html">
+                                            <span class="news-item__image"><img src="images/content/news/default.jpg" alt=""></span>
+                                            <span class="news-item__date">01 апреля 2019</span>
+                                            <span class="news-item__title">Вместе с компанией OneShop Вы прикоснетесь к миру больших денег</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <ol class="pager">
+                                <li class="pager__item">
+                                    <a class="pager__link disabled" title="Назад">
+                                        <svg class="pager__icon" aria-hidden="true">
+                                            <use xlink:href="#prev_arrow"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="pager__item"><a class="pager__link is-active" href="#">1</a></li>
+                                <li class="pager__item"><a class="pager__link" href="#">2</a></li>
+                                <li class="pager__item"><a class="pager__link" href="#">3</a></li>
+                                <li class="pager__item">
+                                    <a class="pager__link" href="#" title="Вперёд">
+                                        <svg class="pager__icon" aria-hidden="true">
+                                            <use xlink:href="#next_arrow"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    //= template/footer.html
+
+    //= template/scripts.html
+    <script src="js/jquery.sticky-kit.min.js"></script>
+    <script src="js/ddscrollspy.js"></script>
+    <script src="js/select-menu.js"></script>
+    <script>
+        $(document).ready(function() {
+            //превращаем меню в селект
+            if ($(".js-selectbox").length) {
+                if ($("body").width() < 1280) {
+                    $('.js-selectbox').selectbox();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

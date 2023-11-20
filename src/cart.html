@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>One-shop - Корзина</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  //= template/favicon.html
+
+  //= template/style.html
+</head>
+
+<body>
+
+  //= template/sprite.html
+
+  <div class="wrapper">
+
+    //= template/header.html
+
+    <div class="page-content">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item">Корзина</li>
+        </ul>
+        <h1>Корзина</h1>
+        <div class="cart-block">
+          <div class="cart-block__left">
+            <div class="cart">
+              <div class="cart__title-block">
+                <div class="cart__title cart__title--1">Товар</div>
+                <div class="cart__title cart__title--2">Вес</div>
+                <div class="cart__title cart__title--3">Цена</div>
+                <div class="cart__title cart__title--4">Количество</div>
+                <div class="cart__title cart__title--5">Итого</div>
+              </div>
+              <div class="cart-item">
+                <div class="cart-item__description">
+                  <p class="cart-item__title">
+                    <a href="#">
+                      <span class="cart-item__image"><img src="images/content/cart/img_1.jpg" alt=""></span>
+                      Офисный набор и 200 визитных карточек
+                    </a>
+                  </p>
+                  <div class="cart-item__buttons">
+                    <button class="cart-item__button" type="button">Удалить</button>
+                    <button class="cart-item__button" type="button">Отложить</button>
+                  </div>
+                </div>
+                <div class="cart-item__info cart-item__info--weight">4.3 кг</div>
+                <div class="cart-item__info cart-item__info--price">3000 ₽</div>
+                <div class="cart-item__info">
+                  <div class="quantity">
+                    <button class="quantity__button" type="button" title="Уменьшить">
+                      <svg class="quantity__button-icon" aria-hidden="true">
+                        <use xlink:href="#minus" />
+                      </svg>
+                    </button>
+                    <input class="quantity__input" type="text" value="1">
+                    <button class="quantity__button" type="button" title="Увеличить">
+                      <svg class="quantity__button-icon" aria-hidden="true">
+                        <use xlink:href="#plus" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="cart-item__info cart-item__info--price cart-item__info--summ">6000 ₽</div>
+              </div>
+              <div class="cart-item">
+                <div class="cart-item__description">
+                  <p class="cart-item__title">
+                    <a href="#">
+                      <span class="cart-item__image"><img src="images/content/cart/img_2.jpg" alt=""></span>
+                      120 уровней доступа СиРБиО
+                    </a>
+                  </p>
+                  <div class="cart-item__buttons">
+                    <button class="cart-item__button" type="button">Удалить</button>
+                    <button class="cart-item__button" type="button">Отложить</button>
+                  </div>
+                </div>
+                <div class="cart-item__info cart-item__info--weight">4.3 кг</div>
+                <div class="cart-item__info cart-item__info--price">3000 ₽</div>
+                <div class="cart-item__info">
+                  <div class="quantity">
+                    <button class="quantity__button" type="button" title="Уменьшить">
+                      <svg class="quantity__button-icon" aria-hidden="true">
+                        <use xlink:href="#minus" />
+                      </svg>
+                    </button>
+                    <input class="quantity__input" type="text" value="1">
+                    <button class="quantity__button" type="button" title="Увеличить">
+                      <svg class="quantity__button-icon" aria-hidden="true">
+                        <use xlink:href="#plus" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="cart-item__info cart-item__info--price cart-item__info--summ">6000 ₽</div>
+              </div>
+            </div>
+            <div class="cart-links cart-links--type_1">
+              <a class="cart-link" href="#">
+                <svg class="cart-link__svg" aria-hidden="true">
+                  <use xlink:href="#prev_arrow" />
+                </svg>
+                Вернуться к покупкам</a>
+              <a class="cart-link cart-link--bordered" href="#"><span class="cart-link__icon"><img src="images/icons/delivery.png" alt=""></span>Города и условия доставки</a>
+            </div>
+          </div>
+          <div class="cart-block__right">
+            <div class="total">
+              <div class="total__info">
+                <p class="total__info-title">Ваш заказ (2)</p>
+                <p class="total__info-row"><span>Общий вес:</span> <span>8.6 кг</span></p>
+                <p class="total__info-row">Товаров на: <span class="total__price">6600 ₽</span></p>
+                <p class="total__info-row">В том числе НДС: <span class="total__price">0 ₽</span></p>
+                <p class="total__summ"><span class="total__summ-title">Итого:</span> <span class="total__summ-price">16 000 ₽</span></p>
+              </div>
+              <button class="total__button" type="button">Оформить заказ</button>
+            </div>
+          </div>
+        </div>
+        <div class="cart-links cart-links--type_2">
+          <a class="cart-link" href="#">
+            <svg class="cart-link__svg" aria-hidden="true">
+              <use xlink:href="#prev_arrow" />
+            </svg>
+            Вернуться к покупкам</a>
+          <a class="cart-link cart-link--bordered" href="#"><span class="cart-link__icon"><img src="images/icons/delivery.png" alt=""></span>Города и условия доставки</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  //= template/footer.html
+
+  //= template/scripts.html
+
+</body>
+
+</html>

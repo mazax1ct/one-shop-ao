@@ -1,0 +1,50 @@
+.papers
+  display: flex
+  flex-wrap: wrap
+  gap: 32px
+
+.paper
+  max-width: 366px
+  position: relative
+  width: 100%
+  z-index: 0
+
+  &::after,
+  &::before
+    border: 1px solid #EBEDF0
+    background-color: #fff
+    content: ''
+    height: 100%
+    position: absolute
+    width: 100%
+    z-index: -1
+
+  &::after
+    left: -4px
+    top: 4px
+
+  &::before
+    left: -8px
+    top: 8px
+
+  &__inner
+    border: 1px solid #EBEDF0
+    background-color: #fff
+    padding: 32px 36px
+    position: relative
+    z-index: 1
+
+  &__title
+    margin-bottom: 8px
+
+  &__value
+    font-family: $secondary-font
+    font-size: 56px
+    font-weight: 700
+    line-height: 1
+
+    &--mod_1
+      color: $main-color
+
+    &--mod_2
+      color: #CD433B

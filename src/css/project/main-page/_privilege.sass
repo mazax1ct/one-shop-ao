@@ -1,0 +1,136 @@
+.privilege-block
+  margin-bottom: 60px
+  overflow: hidden
+
+  @media(min-width: 768px)
+    display: flex
+    margin-left: -25px
+    margin-right: -25px
+    margin-bottom: 125px
+
+  @media(min-width: 1600px)
+    margin-left: -67px
+    margin-right: -67px
+
+  a
+    color: $text-color
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+  &__title
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      display: flex
+      margin-bottom: 40px
+
+    @media(min-width: 1600px)
+      margin-bottom: 48px
+
+    h2
+      font-size: 18px
+      line-height: 27px
+      margin-bottom: 18px
+
+      @media(min-width: 768px)
+        font-size: 24px
+        margin-bottom: 0
+        width: 45%
+
+      @media(min-width: 1280px)
+        font-size: 42px
+        line-height: 54px
+        margin-top: -10px
+
+    p
+      border-left: 5px solid $text-color
+      font-size: 12px
+      line-height: 16px
+      padding-left: 14px
+
+      @media(min-width: 768px)
+        margin-left: 15px
+        margin-right: -25px
+        width: 55%
+
+      @media(min-width: 1280px)
+        font-size: 15px
+        line-height: 22px
+
+  &__item
+    @media(min-width: 768px)
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      padding-left: 25px
+      padding-right: 25px
+      width: 50%
+
+    @media(min-width: 1600px)
+      padding-left: 67px
+      padding-right: 67px
+
+    &:nth-child(1)
+      margin-bottom: 40px
+
+      @media(min-width: 768px)
+        margin-bottom: 0
+
+      @media(min-width: 1280px)
+        min-width: 53.85%
+        width: 53.85%
+
+.privilege-image
+  margin: 0
+
+  &--small
+    .privilege-image__caption
+      font-size: 14px
+      line-height: 19px
+      min-height: 3.2em
+      margin-top: 0.5em
+
+      @media(min-width: 1280px)
+        font-size: 18px
+        line-height: 22px
+        min-height: 2.8em
+        margin-top: 1em
+
+  &__caption
+    font-size: 18px
+    font-weight: 700
+    line-height: 22px
+    min-height: 2.44444em
+    margin-top: 1em
+
+.privilege-cols
+  display: flex
+  margin-left: -14px
+  margin-right: -14px
+  margin-bottom: -25px
+
+  @media(min-width: 1280px)
+    margin-left: -21px
+    margin-right: -21px
+
+  @media(min-width: 1600px)
+    margin-left: -27px
+    margin-right: -27px
+
+  &__col
+    padding-left: 14px
+    padding-right: 14px
+    width: 50%
+
+    @media(min-width: 1280px)
+      padding-left: 21px
+      padding-right: 21px
+
+    @media(min-width: 1600px)
+      padding-left: 27px
+      padding-right: 27px
+
+    .privilege-image
+      margin-bottom: 18px

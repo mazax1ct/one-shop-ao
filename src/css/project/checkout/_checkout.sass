@@ -1,0 +1,312 @@
+.checkout
+  @media(min-width: 1280px)
+    display: flex
+    justify-content: space-between
+
+  &__left
+    max-width: 895px
+    margin-bottom: 30px
+
+    @media(min-width: 1280px)
+      margin-bottom: 0
+
+  &__right
+    @media(min-width: 1280px)
+      margin-left: 50px
+      min-width: 395px
+      width: 395px
+
+  &__title
+    align-items: center
+    border-bottom: 1px solid #D1D1D1
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin-bottom: 40px
+    margin-top: 40px
+    padding-bottom: 25px
+
+    @media(min-width: 1280px)
+      font-size: 21px
+
+    &:first-child
+      margin-top: 0
+
+    .buyer-info-toggle
+      border-bottom: 1px dotted
+      text-decoration: none
+
+  &__row
+    @media(min-width: 768px)
+      display: flex
+      flex-wrap: wrap
+      margin-left: -10px
+      margin-right: -10px
+
+  &__row-item
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      padding-left: 10px
+      padding-right: 10px
+      width: 50%
+
+  .form-label,
+  .select-wrapper
+    &:not(:last-child)
+      margin-bottom: 20px
+
+.delivery-list,
+.payments-list
+  margin-bottom: -20px
+  margin-left: -10px
+  margin-right: -10px
+
+  @media(min-width: 768px)
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    display: flex
+    padding-left: 10px
+    padding-right: 10px
+    margin-bottom: 20px
+    position: relative
+
+    @media(min-width: 768px)
+      width: 33.33333%
+
+    input[type="radio"],
+    input[type="checkbox"]
+      position: absolute
+      height: 1px
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      width: 1px
+
+input:checked + .delivery-item,
+input:checked + .payment-item
+  background-color: rgba(#5A9D0B, 0.06)
+  border-color: #5A9D0B
+
+  .delivery-item__text,
+  .payment-item__text
+    color: #376006
+
+.delivery-item,
+.payment-item
+  background-color: #F4F6F9
+  border: 1px solid #F4F6F9
+  border-radius: 3px
+  cursor: pointer
+  display: block
+  height: 100%
+  padding: 20px
+  text-align: center
+  width: 100%
+
+  &__image,
+  &__text
+    display: block
+
+  &__image
+    min-height: 50px
+    margin-bottom: 20px
+
+  &__text
+    color: #545454
+    font-size: 12px
+    line-height: 18px
+
+.checkout-cart
+  background-color: #F4F6F9
+  font-size: 15px
+  line-height: 23px
+  margin-bottom: 15px
+  padding: 25px 10px
+
+  @media(min-width: 768px)
+    padding: 20px
+
+  &__title
+    border-bottom: 1px solid #B1B1B1
+    display: block
+    font-size: 21px
+    margin-bottom: 25px
+    padding-bottom: 25px
+
+    @media(min-width: 768px)
+      width: 50%
+
+    @media(min-width: 1280px)
+      width: 100%
+
+  &__list
+    @media(min-width: 768px)
+      display: flex
+      flex-wrap: wrap
+      margin-left: -10px
+      margin-right: -10px
+      margin-bottom: -20px
+
+  &__list-item
+    @media(min-width: 768px)
+      padding-left: 10px
+      padding-right: 10px
+      width: 50%
+
+      @media(min-width: 1280px)
+        width: 100%
+
+.checkout-total
+  &__info
+    background-color: #F4F6F9
+    font-size: 15px
+    line-height: 23px
+    padding: 25px 10px
+
+    @media(min-width: 768px)
+      align-items: center
+      display: flex
+      justify-content: space-between
+      margin-bottom: 15px
+      padding: 20px
+
+    @media(min-width: 1280px)
+      display: block
+      margin-left: 0
+      margin-right: 0
+      margin-bottom: 15px
+
+  &__info-row
+    margin-bottom: 10px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+    @media(min-width: 1280px)
+      display: flex
+      justify-content: space-between
+      margin-bottom: 15px
+
+  &__price
+    font-size: 18px
+
+  &__summ
+    font-weight: 600
+
+    @media(min-width: 768px)
+      border-left: 1px solid #B1B1B1
+      padding-left: 20px
+
+    @media(min-width: 1280px)
+      border-top: 1px solid #B1B1B1
+      border-left: none
+      display: flex
+      justify-content: space-between
+      margin-top: 25px
+      padding-left: 0
+      padding-top: 25px
+
+  &__summ-title
+    @media(min-width: 768px)
+      display: block
+
+  &__summ-price
+    font-size: 24px
+    font-weight: 700
+
+  &__button
+    align-items: center
+    background-color: $main-color
+    border: none
+    color: #fff
+    cursor: pointer
+    display: flex
+    font-size: 16px
+    font-weight: 600
+    height: 60px
+    justify-content: center
+    line-height: 22px
+    transition: background-color 0.3s
+    width: 100%
+
+    &:hover
+      background-color: darken($main-color, 5%)
+
+.ccart-item
+  margin-bottom: 15px
+
+  &__description
+    padding-left: 110px
+    padding-right: 30px
+    position: relative
+
+  &__title
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 15px
+
+    a
+      color: $text-color
+      text-decoration: none
+
+  &__image
+    left: 0
+    max-width: 80px
+    position: absolute
+    top: 0
+    width: 80px
+
+  &__info
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+
+    .quantity
+      margin-right: 15px
+      margin-bottom: 15px
+
+  &__price
+    font-size: 16px
+    line-height: 23px
+    margin-bottom: 15px
+
+  &__delete
+    align-items: center
+    background-color: transparent
+    border: none
+    cursor: pointer
+    display: flex
+    height: 30px
+    justify-content: center
+    left: auto
+    position: absolute
+    padding: 0
+    right: 0
+    top: -8px
+    width: 30px
+
+  &__delete-icon
+    fill: rgba(#000, 0.4)
+    height: 10px
+    width: 10px
+
+  .quantity__button
+    background-color: #fff
+
+.checkout-popup
+  background-color: #fff
+  display: none
+  max-width: 600px
+  padding: 25px
+  width: 100%
+
+  &__buttons
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    .simple-button
+      margin: 5px auto
+      min-width: 200px

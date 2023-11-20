@@ -1,0 +1,52 @@
+.news
+  max-width: 1160px
+  margin-left: auto
+  margin-right: auto
+
+  &__list
+    @media(min-width: 768px)
+      display: flex
+      flex-wrap: wrap
+      margin-left: -12px
+      margin-right: -12px
+
+  &__item
+    margin-bottom: 55px
+
+    @media(min-width: 768px)
+      padding-left: 12px
+      padding-right: 12px
+      width: 33.33333%
+
+    @media(min-width: 1280px)
+      width: 25%
+
+    @media(min-width: 1600px)
+      margin-bottom: 80px
+
+.news-item
+  &__link
+    color: $text-color
+    display: block
+    text-decoration: none
+
+    &:hover
+      .news-item__title
+        text-decoration: underline
+
+  &__image
+    display: block
+    margin-bottom: 12px
+
+  &__date
+    display: block
+    font-size: 0.8em
+    margin-bottom: 8px
+
+  &__title
+    display: block
+    font-weight: 600
+
+.news-date
+  color: #666
+  margin-bottom: 5px

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>One-shop - О магазине</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  //= template/favicon.html
+
+  //= template/style.html
+</head>
+
+<body>
+
+  //= template/sprite.html
+
+  <div class="wrapper">
+
+    //= template/header.html
+
+    <div class="page-content">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item">О магазине</li>
+        </ul>
+
+        <div class="page-columns">
+          <div class="page-columns__left">
+            <div class="js-sticky-block">
+              <div class="js-selectbox selectbox">
+                <div class="selectbox__value">Новости</div>
+                <ul id="float-nav" class="float-nav selectbox__list">
+                  <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link selected" href="about.html">Новости</a></li>
+                  <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link" href="management.html">Новости</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        	<div class="js-content-with-sticky page-columns__right">
+            <div class="text-block">
+                <p class="news-date">20 Августа 2020</p>
+                <h1 id="1">Два партнера привлечены к ответственности за нарушение правил Компании</h1>
+            </div>
+            <div class="simple-slider-block">
+              <div class="js-simple-slider simple-slider">
+                <div class="simple-slider__slide"><img src="images/content/about/img_1.jpg" alt="Два партнера привлечены к ответственности за нарушение правил Компании"></div>
+                <div class="simple-slider__slide"><img src="images/content/about/img_1.jpg" alt="Два партнера привлечены к ответственности за нарушение правил Компании"></div>
+                <div class="simple-slider__slide"><img src="images/content/about/img_1.jpg" alt="Два партнера привлечены к ответственности за нарушение правил Компании"></div>
+              </div>
+              <div class="js-slider-nav simple-slider-block__bottom">
+                <p class="js-slider-count simple-slider-block__counter">
+                  <span class="simple-slider-block__counter-current">01</span> <span class="simple-slider-block__counter-separator">/</span> <span class="simple-slider-block__counter-all"> 03</span>
+                </p>
+              </div>
+            </div>
+            <div class="text-block">
+              В августе 2020 года на основании поступивших жалоб принято решение о дисциплинарных взысканиях в отношении ряда партнеров.<br>
+              <br>
+              Терминирован партнер из города Элиста. Основание терминации - результаты служебной проверки по поступившему обращению партнера о защите чести, достоинства и деловой репутации в соответствии со ст. 152 Гражданского кодекса РФ. Бывший партнер Компании анонимно распространял заведомо ложную информацию, порочащую честь и достоинство вышестоящего спонсора. Раскрытие личности автора нескольких анонимно направленных материалов произошло благодаря самому же автору и его стремлению опорочить деловую репутацию своего спонсора. Партнёр удалён из системы без права восстановления после проведённых выплат со стороны Компании - все средства по инвестиционной программе были возвращены ему в полном объёме.<br>
+              <br>
+              Заблокирован доступ к личному кабинету на один календарный месяц партнеру из Ижевска. Основание блокировки - нарушение в части распространения конфиденциальной информации, предоставляемой исключительно партнёрам Компании. Из-за публикации конфиденциальной информации в открытом доступе в сети Интернет партнер временно не сможет продолжать ведение бизнеса.<br>
+              <br>
+              Центральный офис обнародует настоящую информацию с целью оповещения партнёров о возможных санкциях со стороны Компании в случае нарушений.</div>	</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  //= template/footer.html
+
+  //= template/scripts.html
+
+  <script src="js/jquery.sticky-kit.min.js"></script>
+  <script src="js/ddscrollspy.js"></script>
+  <script src="js/select-menu.js"></script>
+  <script>
+    $(document).ready(function () {
+      //превращаем меню в селект
+      if ($(".js-selectbox").length) {
+        if ($("body").width() < 1280) {
+          $('.js-selectbox').selectbox();
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+.directors-list
+  margin-bottom: -40px
+
+  @media(min-width: 768px)
+    display: flex
+    flex-wrap: wrap
+    margin-left: -25px
+    margin-right: -25px
+    margin-bottom: -60px
+
+  @media(min-width: 1280px)
+    margin-left: -45px
+    margin-right: -45px
+
+  @media(min-width: 1900px)
+    margin-left: -34px
+    margin-right: -34px
+
+  &:last-child
+    margin-bottom: 0
+
+  &__item
+    margin-bottom: 40px
+
+    @media(min-width: 768px)
+      margin-bottom: 60px
+      padding-left: 25px
+      padding-right: 25px
+
+    @media(min-width: 1280px)
+      padding-left: 45px
+      padding-right: 45px
+
+    @media(min-width: 1900px)
+      padding-left: 34px
+      padding-right: 34px
+
+.director
+  font-size: 15px
+  line-height: 22px
+  max-width: 200px
+
+  &__photo
+    margin-bottom: 20px
+
+  &__name
+    border-bottom: 1px solid #CFCFCF
+    font-weight: 700
+    margin-bottom: 5px
+    padding-bottom: 20px
+
+  &__city
+    color: #335A00
+    font-family: $secondary-font
+    font-style: italic

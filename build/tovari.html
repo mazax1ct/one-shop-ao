@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>One-shop - товары</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#376006">
+  <link rel="shortcut icon" href="images/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="images/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+
+  <svg aria-hidden="true" style="width: 0px; height: 0px; overflow: hidden; position: absolute;" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="user" viewBox="0 0 40 40">
+          <path
+            d="M20,0.5C9.2,0.5,0.5,9.2,0.5,20S9.2,39.5,20,39.5S39.5,30.8,39.5,20S30.8,0.5,20,0.5z M30.1,33.7C27.2,35.7,23.8,37,20,37s-7.2-1.3-10.1-3.3v-1.1c0-2.8,2.3-5,5-5c0.9,0,2.2,0.9,5,0.9c2.9,0,4.2-0.9,5-0.9c2.8,0,5,2.3,5,5V33.7z M32.5,31.5C31.9,27.8,28.8,25,25,25c-1.6,0-2.4,0.9-5,0.9S16.6,25,15,25c-3.8,0-6.9,2.8-7.4,6.5C4.7,28.5,3,24.4,3,20c0-9.4,7.6-17,17-17s17,7.6,17,17C37,24.4,35.3,28.5,32.5,31.5z M20,9.3c-3.8,0-6.9,3.1-6.9,6.9s3.1,6.9,6.9,6.9s6.9-3.1,6.9-6.9S23.8,9.3,20,9.3z M20,20.6c-2.4,0-4.4-2-4.4-4.4s2-4.4,4.4-4.4s4.4,2,4.4,4.4S22.4,20.6,20,20.6z" />
+      </symbol>
+      <symbol id="vk" viewBox="0 0 40 40">
+          <path
+            d="M19.7,27.5h1.6c0,0,0.5-0.1,0.7-0.3c0.2-0.2,0.2-0.7,0.2-0.7s0-2.1,1-2.4c1-0.3,2.3,2,3.7,2.9c1,0.7,1.8,0.5,1.8,0.5l3.7,0c0,0,1.9-0.1,1-1.6c-0.1-0.1-0.5-1.1-2.7-3c-2.3-2.1-2-1.7,0.8-5.3c1.7-2.2,2.4-3.5,2.1-4c-0.2-0.5-1.4-0.4-1.4-0.4l-4.1,0c0,0-0.3,0-0.5,0.1c-0.2,0.1-0.4,0.4-0.4,0.4s-0.7,1.7-1.5,3.1c-1.8,3-2.6,3.2-2.9,3c-0.7-0.4-0.5-1.7-0.5-2.7c0-2.9,0.5-4.1-0.9-4.4c-0.4-0.1-0.8-0.2-1.9-0.2c-1.5,0-2.7,0-3.4,0.3c-0.5,0.2-0.8,0.7-0.6,0.7c0.3,0,0.9,0.2,1.2,0.6c0.4,0.6,0.4,1.8,0.4,1.8s0.2,3.4-0.6,3.8c-0.6,0.3-1.3-0.3-2.9-3c-0.8-1.4-1.5-2.9-1.5-2.9s-0.1-0.3-0.3-0.4c-0.3-0.2-0.6-0.2-0.6-0.2l-3.9,0c0,0-0.6,0-0.8,0.3c-0.2,0.2,0,0.7,0,0.7s3.1,6.9,6.5,10.4C16.1,27.7,19.7,27.5,19.7,27.5L19.7,27.5z" />
+      </symbol>
+      <symbol id="ok" viewBox="0 0 40 40">
+          <g>
+              <path d="M26.1,15c0,3.3-2.7,6.1-6.1,6.1c-3.3,0-6-2.7-6.1-6.1c0-3.3,2.7-6.1,6.1-6.1S26.1,11.7,26.1,15z M23.3,15c0-1.8-1.5-3.3-3.3-3.3s-3.3,1.5-3.3,3.3c0,1.8,1.5,3.3,3.3,3.3C21.8,18.3,23.3,16.8,23.3,15z" />
+              <path
+                d="M25.9,23.8c0.7-0.4,1-1.1,1-1.9c0-0.6-0.4-1.2-0.9-1.5c-0.6-0.3-1.3-0.2-1.8,0.2c-2.5,1.8-5.8,1.8-8.3,0c-0.5-0.4-1.2-0.5-1.8-0.2c-0.6,0.3-0.9,0.9-0.9,1.5c0,0.8,0.4,1.5,1,1.9c0.8,0.5,1.7,1,2.7,1.3c0.2,0,0.3,0.1,0.5,0.1l-2.8,2.7c-0.7,0.7-0.7,1.8,0,2.6c0.7,0.7,1.9,0.7,2.6,0c0,0,0,0,0,0l2.8-2.9l2.8,2.9c0.7,0.7,1.9,0.7,2.6,0c0.7-0.7,0.8-1.8,0-2.6c0,0,0,0,0,0l-2.8-2.7c0.2,0,0.3-0.1,0.5-0.1C24.1,24.8,25,24.4,25.9,23.8z" />
+          </g>
+      </symbol>
+      <symbol id="yt" viewBox="0 0 40 40">
+          <path d="M12.4,12.4h15.3c1.8,0,3.3,1.5,3.3,3.3v8.7c0,1.8-1.5,3.3-3.3,3.3H12.4c-1.8,0-3.3-1.5-3.3-3.3v-8.7C9.1,13.8,10.6,12.4,12.4,12.4z M17.8,15.5v8.2l6.2-4.1L17.8,15.5z" />
+      </symbol>
+      <symbol id="fb" viewBox="0 0 40 40">
+          <path d="M24.4,20h-2.9v10.4h-4.3V20h-2.1v-3.7h2.1v-2.4c0-1.7,0.8-4.4,4.4-4.4l3.2,0v3.6h-2.3c-0.4,0-0.9,0.2-0.9,1v2.2h3.2L24.4,20z" />
+      </symbol>
+      <symbol id="inst" viewBox="0 0 40 40">
+          <g>
+              <path
+                d="M29.5,13.5c0.2,0.6,0.4,1.4,0.5,2.4c0,1.1,0.1,1.4,0.1,4.1c0,2.7,0,3.1-0.1,4.1c0,1.1-0.2,1.8-0.5,2.4c-0.5,1.3-1.6,2.4-2.9,2.9c-0.6,0.2-1.4,0.4-2.4,0.5C23.1,30,22.7,30,20,30c-2.7,0-3.1,0-4.1-0.1c-1.1,0-1.8-0.2-2.4-0.5c-0.7-0.2-1.3-0.6-1.8-1.2c-0.5-0.5-0.9-1.1-1.2-1.8c-0.2-0.6-0.4-1.4-0.5-2.4c0-1.1-0.1-1.4-0.1-4.1c0-2.7,0-3.1,0.1-4.1c0-1.1,0.2-1.8,0.5-2.4c0.3-0.7,0.6-1.3,1.2-1.8c0.5-0.5,1.1-0.9,1.8-1.2c0.6-0.2,1.4-0.4,2.4-0.5c1.1,0,1.4-0.1,4.1-0.1c2.7,0,3.1,0,4.1,0.1c1.1,0,1.8,0.2,2.4,0.5c0.7,0.2,1.3,0.6,1.8,1.2C28.8,12.2,29.2,12.8,29.5,13.5z M27.8,25.9c0.1-0.4,0.3-0.9,0.3-1.9c0-1.1,0.1-1.4,0.1-4c0-2.7,0-3-0.1-4c0-1-0.2-1.5-0.3-1.9c-0.2-0.4-0.4-0.8-0.7-1.1c-0.3-0.3-0.7-0.6-1.1-0.7c-0.4-0.1-0.9-0.3-1.9-0.3c-1.1,0-1.4-0.1-4-0.1c-2.7,0-3,0-4,0.1c-1,0-1.5,0.2-1.9,0.3c-0.4,0.2-0.8,0.4-1.1,0.7c-0.3,0.3-0.6,0.7-0.8,1.1c-0.1,0.4-0.3,0.9-0.3,1.9c0,1.1-0.1,1.4-0.1,4c0,2.7,0,3,0.1,4c0,1,0.2,1.5,0.3,1.9c0.2,0.4,0.4,0.8,0.7,1.1c0.3,0.3,0.7,0.6,1.1,0.7c0.4,0.1,0.9,0.3,1.9,0.3c1.1,0,1.4,0.1,4,0.1c2.7,0,3,0,4-0.1c1,0,1.5-0.2,1.9-0.3C26.8,27.5,27.5,26.8,27.8,25.9z" />
+              <path d="M14.9,20c0-2.8,2.3-5.1,5.1-5.1c2.8,0,5.1,2.3,5.1,5.1c0,2.8-2.3,5.1-5.1,5.1C17.2,25.1,14.9,22.8,14.9,20z M16.7,20c0,1.8,1.5,3.3,3.3,3.3c1.8,0,3.3-1.5,3.3-3.3c0-1.8-1.5-3.3-3.3-3.3C18.2,16.7,16.7,18.2,16.7,20z" />
+              <path d="M26.5,14.7c0,0.7-0.5,1.2-1.2,1.2c-0.7,0-1.2-0.5-1.2-1.2c0-0.7,0.5-1.2,1.2-1.2C26,13.5,26.5,14,26.5,14.7L26.5,14.7z" />
+          </g>
+      </symbol>
+      <symbol id="cart" viewBox="0 0 29 25">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M5.39 7.82003L11.86 1.35003C12.1679 1.0269 12.6267 0.895923 13.0588 1.00781C13.4909 1.11969 13.8285 1.45688 13.9408 1.88884C14.0532 2.32081 13.9228 2.77975 13.6 3.08803L8.87 7.82003H5.39ZM20.07 7.82003H23.54L17.08 1.35003C16.5969 0.888643 15.8339 0.89719 15.3612 1.36928C14.8886 1.84138 14.8792 2.60441 15.34 3.08803L20.07 7.82003ZM0 9.55203V12.361H0.78C1.42272 12.3611 2.00903 12.728 2.29 13.306L7.54 24.038H21.42L26.65 13.308C26.9308 12.7295 27.517 12.3619 28.16 12.361H28.93V9.55203H0Z" />
+      </symbol>
+      <symbol id="burger" viewBox="0 0 30 25">
+          <rect y="0.25" width="30" height="3" />
+          <rect y="10.75" width="30" height="3" />
+          <rect y="21.25" width="30" height="3" />
+      </symbol>
+      <symbol id="close" viewBox="0 0 16 16">
+          <rect x="0.443359" y="14.1422" width="20" height="2" transform="rotate(-45 0.443359 14.1422)" />
+          <rect x="1.85742" width="20" height="2" transform="rotate(45 1.85742 0)" />
+      </symbol>
+      <symbol id="subscribe_arrow" viewBox="0 0 32 18">
+          <path
+            d="M22.9766 17.2143C22.6766 17.2143 22.4766 17.1143 22.2766 16.9143C21.8766 16.5143 21.8766 15.9143 22.2766 15.5143L28.9766 8.91426L22.2766 2.31426C21.8766 1.91426 21.8766 1.31426 22.2766 0.914258C22.6766 0.514258 23.2766 0.514258 23.6766 0.914258L31.0766 8.21426C31.2766 8.41426 31.3766 8.61426 31.3766 8.91426C31.3766 9.21426 31.2766 9.41426 31.0766 9.61426L23.6766 16.9143C23.4766 17.1143 23.2766 17.2143 22.9766 17.2143Z" />
+          <path d="M30.3758 9.91406H1.67578C1.07578 9.91406 0.675781 9.51406 0.675781 8.91406C0.675781 8.31406 1.07578 7.91406 1.67578 7.91406H30.3758C30.9758 7.91406 31.3758 8.31406 31.3758 8.91406C31.3758 9.51406 30.9758 9.91406 30.3758 9.91406Z" />
+      </symbol>
+      <symbol id="arrow_right" viewBox="0 0 17 28">
+          <polygon points="1.5,27.6 0.2,26.1 13.4,14 0.2,1.9 1.5,0.4 16.3,14" />
+      </symbol>
+      <symbol id="download" viewBox="0 0 34 34">
+          <g>
+              <path
+                d="M25.2,18.5V19h0.5v-0.5H25.2z M25.2,8.7h0.5V8.2h-0.5V8.7z M24.3,18.5h-0.5V19h0.5V18.5z M24.3,8.7V8.2h-0.5v0.5H24.3z M3.5,0.6V0.1H3.1v0.5H3.5z M17.7,0.6l0.3-0.3l-0.1-0.2h-0.2V0.6z M17.9,0.7l0.3-0.3L17.9,0.7z M25.2,8.7L25.6,9l0.3-0.3l-0.3-0.3L25.2,8.7z M24.5,9.3l-0.3,0.3l0.3,0.3l0.3-0.3L24.5,9.3z M17.3,1.5l0.3-0.3L17.5,1h-0.2V1.5z M4.5,1.5V1H4v0.5H4.5z M4.5,30.5H4v0.5h0.5V30.5z M21.1,30.5h0.5V30h-0.5V30.5z M21.1,31.4v0.5h0.5v-0.5H21.1z M3.5,31.4H3.1v0.5h0.5V31.4z M25.7,18.5V8.7h-0.9v9.9H25.7z M24.3,19h0.9v-0.9h-0.9V19z M23.8,8.7v9.9h0.9V8.7H23.8z M25.2,8.2h-0.9v0.9h0.9V8.2z M4,0.1H3.5V1H4V0.1z M17.5,0.1H4V1h13.5V0.1z M17.7,0.1h-0.2V1h0.2V0.1z M18.2,0.4l-0.1-0.2l-0.7,0.6L17.5,1L18.2,0.4z M25.6,8.4l-7.4-8L17.5,1l7.4,8L25.6,8.4z M24.9,9.7L25.6,9l-0.6-0.7L24.2,9L24.9,9.7z M17,1.8l7.2,7.8L24.9,9l-7.2-7.8L17,1.8z M4.5,2h12.8V1H4.5V2z M5,30.5v-29H4v29H5z M21.1,30H4.5v0.9h16.6V30z M21.6,31.4v-0.9h-0.9v0.9H21.6z M4,31.9h17.1v-0.9H4V31.9z M3.5,31.9H4v-0.9H3.5V31.9z M3.1,30.9v0.5H4v-0.5H3.1z M3.1,1v29.9H4V1H3.1z M3.1,0.6V1H4V0.6H3.1z" />
+              <path class="st0" d="M25.3,33.9l-5.6-7.1h3.4v-6.4h4.2v6.4h3.6L25.3,33.9z M21.8,27.8l3.5,4.5l3.5-4.5h-2.5v-6.4h-2.2v6.4H21.8z" />
+              <rect x="9" y="11.4" width="10.7" height="1" />
+              <rect x="9" y="15.8" width="7.6" height="1" />
+              <rect x="9" y="19.6" width="10.7" height="1" />
+          </g>
+      </symbol>
+      <symbol id="slider_arrow_left" viewBox="0 0 12 22">
+          <polygon points="10.1,0.8 11.6,2.2 3.2,11 11.6,19.8 10.1,21.2 0.4,11" />
+      </symbol>
+      <symbol id="slider_arrow_right" viewBox="0 0 12 22">
+          <polygon points="1.9,21.2 0.4,19.8 8.8,11 0.4,2.2 1.9,0.8 11.6,11" />
+      </symbol>
+      <symbol id="prev_arrow" viewBox="0 0 12 12">
+          <polygon points="8.6,12 2.1,6 8.6,0 9.9,1.4 4.9,6 9.9,10.6" />
+      </symbol>
+      <symbol id="next_arrow" viewBox="0 0 12 12">
+          <polygon points="3.4,0 9.9,6 3.4,12 2.1,10.6 7.1,6 2.1,1.4" />
+      </symbol>
+      <symbol id="catalog_view_1" viewBox="0 0 19 19">
+          <g>
+              <rect x="7" y="7" width="5" height="5" />
+              <rect width="5" height="5" />
+              <rect x="7" y="14" width="5" height="5" />
+              <rect y="7" width="5" height="5" />
+              <rect y="14" width="5" height="5" />
+              <rect x="14" width="5" height="5" />
+              <rect x="7" width="5" height="5" />
+              <rect x="14" y="7" width="5" height="5" />
+              <rect x="14" y="14" width="5" height="5" />
+          </g>
+      </symbol>
+      <symbol id="catalog_view_2" viewBox="0 0 19 19">
+          <g>
+              <path d="M0 0H5.25532V5H0V0Z" />
+              <path d="M6.87231 0H18.8723V5H6.87231V0Z" />
+              <path d="M0 7H5.25532V12H0V7Z" />
+              <path d="M6.87231 7.00299H18.8723V12.003H6.87231V7.00299Z" />
+              <path d="M0 14H5.25532V19H0V14Z" />
+              <path d="M6.87231 14.006H18.8723V19.006H6.87231V14.006Z" />
+          </g>
+      </symbol>
+      <symbol id="catalog_view_3" viewBox="0 0 19 19">
+          <g>
+              <path d="M0 0H19V5H0V0Z" />
+              <path d="M0 7.00299H19V12.003H0V7.00299Z" />
+              <path d="M0 14.006H19V19.006H0V14.006Z" />
+          </g>
+      </symbol>
+      <symbol id="minus" viewBox="0 0 10 10">
+          <rect y="4.3" width="10" height="1.3" />
+      </symbol>
+      <symbol id="plus" viewBox="0 0 10 10">
+          <g>
+              <rect x="4.3" width="1.3" height="10" />
+              <rect y="4.3" width="10" height="1.3" />
+          </g>
+      </symbol>
+      <symbol id="arrow_up" viewBox="0 0 16 16">
+          <polygon points="14.6,13.1 8,5.6 1.4,13.1 0,11.9 8,2.9 16,11.9" />
+      </symbol>
+      <symbol id="reg" viewBox="0 0 496 512">
+          <path
+            d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z">
+          </path>
+      </symbol>
+      <symbol id="file" viewBox="0 0 30 34">
+          <path d="M6.66699 27H23.3337V23.6667H6.66699V27ZM23.3337 20.3333H6.66699V17H23.3337V20.3333ZM6.66699 13.6667H13.3337V10.3333H6.66699V13.6667Z" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M5 0.333328C3.67392 0.333328 2.40215 0.860113 1.46447 1.79779C0.526784 2.73548 0 4.00725 0 5.33333V28.6667C0 29.9927 0.526784 31.2645 1.46447 32.2022C2.40215 33.1399 3.67392 33.6667 5 33.6667H25C26.3261 33.6667 27.5979 33.1399 28.5355 32.2022C29.4732 31.2645 30 29.9927 30 28.6667V12C30 8.9058 28.7708 5.93834 26.5829 3.75042C24.395 1.56249 21.4275 0.333328 18.3333 0.333328H5ZM5 3.66666H16.6667V12H26.6667V28.6667C26.6667 29.1087 26.4911 29.5326 26.1785 29.8452C25.866 30.1577 25.442 30.3333 25 30.3333H5C4.55797 30.3333 4.13405 30.1577 3.82149 29.8452C3.50893 29.5326 3.33333 29.1087 3.33333 28.6667V5.33333C3.33333 4.8913 3.50893 4.46738 3.82149 4.15482C4.13405 3.84226 4.55797 3.66666 5 3.66666ZM20 3.83333C21.31 4.1017 22.5363 4.68081 23.5758 5.52192C24.6153 6.36303 25.4375 7.44153 25.9733 8.66666H20V3.83333Z" />
+      </symbol>
+  </svg>
+
+  <div class="wrapper">
+
+    <header class="header">
+        <div class="header__inner container">
+            <a class="header__logo" href="main.html"><img src="images/logo.svg" alt="Oneshop"></a>
+            <div class="header__menu-block">
+                <div class="header__menus">
+                    <nav class="main-menu">
+                        <ul class="main-menu__list">
+                            <li class="main-menu__item"><a class="main-menu__link" href="main.html">Главная</a></li>
+                            <li class="main-menu__item"><a class="main-menu__link" href="about.html">Портрет АО</a></li>
+                            <li class="main-menu__item"><a class="main-menu__link" href="#">Раскрытие информации</a></li>
+                            <li class="main-menu__item"><a class="main-menu__link" href="reports.html">Отчётность</a></li>
+                            <li class="main-menu__item"><a class="main-menu__link" href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header__links">
+                    <div class="header__user-links">
+                        <a class="header__user-link user-link" href="#">
+                            <span class="user-link__icon-block user-link__icon-block--enter"></span>
+                            <span class="user-link__text"><b>Войти</b></span>
+                        </a>
+    
+                        <button class="js-menu-toggler menu-toggler" type="button">
+                            <svg class="menu-toggler__burger" aria-hidden="true">
+                                <use xlink:href="#burger" />
+                            </svg>
+                            <svg class="menu-toggler__close" aria-hidden="true">
+                                <use xlink:href="#close" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="page-content">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item">Каталог</li>
+        </ul>
+
+        <div class="page-columns">
+          <div class="page-columns__left">
+            <div class="js-selectbox selectbox">
+              <div class="selectbox__value">Все товары</div>
+              <ul id="float-nav" class="float-nav selectbox__list">
+                <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link selected" href="#">Все товары</a></li>
+                <li class="float-nav__item selectbox__item">
+                  <a class="float-nav__link selectbox__link" href="#">Информационные товары</a>
+                  <ul class="js-scroll-spy sub-menu">
+                    <li><a href="#">Офисные наборы</a></li>
+                    <li><a href="#">Уровни доступа СиРБиО</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="page-columns__right">
+            <div class="intro">
+              <div class="intro__left">
+                <h1 class="intro__title">Зарабатывать на привычных тратах и превратить расходы в доходы?<br> <b>Все возможно с One&nbsp;Shop&nbsp;World!</b></h1>
+                <p class="intro__text">Здесь вы найдете информацию о товарах One&nbsp;Shop World. Покупка любого товара пополняет ваш личный объем, а значит позволяет заработать бонусы, потратить которые можно как внутри системы, так и выведя на банковскую карту или счет ИП. Приятных покупок!</p>
+                <form class="intro__form" action="">
+                  <input class="intro__form-input" type="text" name="q" placeholder="введите товар">
+                  <button class="intro__form-submit" type="submit">поиск</button>
+                </form>
+                <a class="intro__link" href="#">OneShop STORE</a>
+              </div>
+              <div class="intro__right"><img src="images/content/tovari/intro.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shops-sections">
+          <div class="shop-section">
+            <div class="shop-section__title-block" style="background-image: url('images/content/tovari/section_1.jpg')">
+              <div>
+                <h2 class="shop-section__title">OneShop <small>продукты</small></h2>
+                <p class="shop-section__preview-text">Качественные и вкусные<br> продукты с доставкой<br> на дом и в офис</p>
+              </div>
+            </div>
+            <div class="shop-section__text-block">
+              <p>Покупая продукты и иные товары ежедневной необходимости, наши партнеры не только получают качественные проверенные товары, но и переводят основную статью расходов в доходы, получая бонусы за рекомендацию магазина. Бонусами можно оплатить до 99% любой покупки в онлайн-магазине и магазинах сети.</p>
+              <p><a href="#">подробнее</a></p>
+            </div>
+          </div>
+          <div class="shop-section shop-section--reverse">
+            <div class="shop-section__title-block" style="background-image: url('images/content/tovari/section_2.jpg')">
+              <div>
+                <h2 class="shop-section__title">OneShopBeauty</h2>
+                <p class="shop-section__preview-text">Средства по уходу<br> за собой – гарантия<br> качества и прекрасного<br> результата</p>
+              </div>
+            </div>
+            <div class="shop-section__text-block">
+              <p>Косметические средства собственной торговой марки поступят в продажу совсем скоро. Сейчас мы тестируем разных производителей и принимаем непосредственное участие в разработке уникальных составов. В планах Компании не просто выпуск средств по уходу за собой. OneShopBeauty выйдет на рынок несколькими вариантами косметических боксов, удовлетворяющих ежедневные потребности покупателей. Мы заботимся о вас и экономим ваше время!</p>
+              <p><a href="#">подробнее</a></p>
+            </div>
+          </div>
+          <div class="shop-section">
+            <div class="shop-section__title-block" style="background-image: url('images/content/tovari/section_3.jpg')">
+              <div>
+                <h2 class="shop-section__title">OneTech</h2>
+                <p class="shop-section__preview-text">Моноблок OneTech – готовое<br> решение для вашего бизнеса</p>
+              </div>
+            </div>
+            <div class="shop-section__text-block">
+              <p>Бренд электроники от One Shop представлен моноблоками. Моноблок – это персональный компьютер, в котором все его составляющие собраны в одном корпусе. Полноценный компьютер, который занимает минимум площади и максимально прост в сборке и запуске пользователем.<br> Уже сегодня запланировано расширение ассортимента – мы продолжаем переговоры с разными производителями и представим партнерам разные версии моноблоков в разных ценовых категориях, а также сопутствующие товары – клавиатуры, мыши, колонки, наушники и многое другое.</p>
+              <p><a href="#">подробнее</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+      <div class="footer__inner container">
+          <div class="footer__left">
+              <p class="footer__copyright">© One Shop World Ltd. 2020</p>
+              <ul class="footer__links">
+                  <li class="footer__links-item"><a class="footer__link" href="#">Условия обработки персональных данных</a></li>
+                  <li class="footer__links-item"><a class="footer__link" href="#">Политика в отношении обработки персональных данных</a></li>
+              </ul>
+          </div>
+          <div class="footer__contacts">
+              <p class="footer__contact">Email:<br> <a class="footer__contact-link" href="mailto:info@one-shopw.com">info@one-shopw.com</a></p>
+              <p class="footer__contact">Тех. поддержка:<br> <a class="footer__contact-link" href="mailto:texpomosh@one-shopw.com">texpomosh@one-shopw.com</a></p>
+          </div>
+      </div>
+  </footer>
+
+  <script type="text/javascript" src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="js/bodyScrollLock.min.js"></script>
+  <script type="text/javascript" src="js/simplebar.min.js"></script>
+  <script type="text/javascript" src="js/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="js/select2.full.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+  <script src="js/select-menu.js"></script>
+  <script>
+    $(document).ready(function () {
+      //превращаем меню в селект
+      if ($(".js-selectbox").length) {
+        if ($("body").width() < 1280) {
+          $('.js-selectbox').selectbox();
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+.banner
+  margin-bottom: 60px
+
+  @media(min-width: 768px)
+    margin-bottom: 115px
+
+  @media(min-width: 1280px)
+    display: flex
+    min-height: 460px
+    margin-bottom: 160px
+
+  &:last-child
+    margin-bottom: 0
+
+  &__image
+    background-color: $main-color
+    background-position: 50% 50%
+    background-repeat: no-repeat
+    background-size: cover
+    padding-bottom: 56.25%
+
+    @media(min-width: 1280px)
+      flex-grow: 1
+      padding-bottom: 0
+
+  &__text-block
+    background-color: $main-color
+    color: #fff
+    padding: 35px 25px 45px
+
+    @media(min-width: 768px)
+      padding: 60px 80px 85px
+
+    @media(min-width: 1280px)
+      padding: 90px 78px
+      width: 42.14285%
+
+  &__title
+    font-family: $main-font
+    font-size: 18px
+    font-weight: 700
+    line-height: 25px
+    margin-bottom: 25px

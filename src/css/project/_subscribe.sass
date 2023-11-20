@@ -1,0 +1,136 @@
+.subscribe
+  background-color: $main-color
+  color: #fff
+  overflow: hidden
+  padding-top: 33px
+  padding-bottom: 69px
+
+  @media(min-width: 768px)
+    padding-top: 104px
+    padding-bottom: 114px
+
+  &__title
+    font-size: 36px
+    line-height: 1.33333
+    margin-bottom: 45px
+    text-align: center
+
+    @media(min-width: 768px)
+      margin-bottom: 35px
+
+  &__form
+    align-items: center
+    background-color: #fff
+    box-shadow: 0 2px 36px 0 rgba(#000, 0.5)
+    display: flex
+    justify-content: space-between
+    margin-bottom: 15px
+    max-width: 692px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 23px
+    padding-right: 5px
+    position: relative
+    z-index: 1
+
+    @media(min-width: 768px)
+      margin-bottom: 15px
+      padding-right: 7px
+
+    &::after
+      background: url('../images/bg/subscribe_.png') no-repeat 0 0 / 100% auto transparent
+      content: ''
+      height: 328px
+      left: 51%
+      position: absolute
+      top: 63%
+      transform: translate(-50%, -50%)
+      width: 524px
+      z-index: -1
+
+      @media(min-width: 768px)
+        left: 58.5%
+        top: -20%
+
+      @media(min-width: 768px)
+        left: 101%
+
+      @media(min-width: 1600px)
+        left: 123%
+
+  &__input
+    background-color: #fff
+    border: none
+    font-size: 16px
+    flex-grow: 1
+    height: 65px
+    line-height: 22px
+    padding-left: 20px
+    padding-right: 20px
+    padding-top: 23px
+    padding-bottom: 20px
+    width: calc(100% - 60px)
+
+    @media(min-width: 768px)
+      padding-left: 33px
+      padding-right: 33px
+      width: calc(100% - 200px)
+
+    &::-webkit-input-placeholder
+      color: #979797
+      opacity: 1
+
+    &::-moz-placeholder
+      color: #979797
+      opacity: 1
+
+    &:-ms-input-placeholder
+      color: #979797
+      opacity: 1
+
+  &__submit
+    align-items: center
+    background-color: $main-color
+    border: none
+    color: #fff
+    cursor: pointer
+    display: flex
+    font-size: 16px
+    font-weight: 600
+    height: 55px
+    justify-content: center
+    line-height: 22px
+    transition: background-color 0.3s
+    width: 59px
+
+    @media(min-width: 768px)
+      width: 200px
+
+    &:hover
+      background-color: darken($main-color, 5%)
+
+  &__submit-icon
+    fill: #fff
+    height: 16px
+    width: 30px
+
+    @media(min-width: 768px)
+      display: none
+
+  &__submit-text
+    @media(max-width: 767px)
+      position: absolute !important
+      height: 1px
+      width: 1px
+      overflow: hidden
+      clip: rect(1px 1px 1px 1px)
+      clip: rect(1px, 1px, 1px, 1px)
+      white-space: nowrap
+
+  &__note
+    font-size: 14px
+    line-height: 17px
+    text-align: center
+
+    a
+      color: #fff

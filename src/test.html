@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>One-shop - Оформление заказа</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/style.html
+</head>
+
+<body>
+
+    //= template/sprite.html
+
+    <style>
+        .responsive-video {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+        }
+
+        .responsive-video iframe,
+        .responsive-video video,
+        .responsive-video object {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .test-wrapper {
+            background-color: #f1f3f5;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1000px;
+            padding: 30px;
+        }
+
+        @media(min-width: 1000px) {
+            .test-wrapper {
+                padding: 50px;
+            }
+        }
+
+        .test-wrapper .responsive-video {
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .test-wrapper h4 {
+            margin-bottom: 0;
+        }
+
+        .test-step {
+            display: none;
+        }
+
+        .test-step.is-active {
+            display: block;
+        }
+
+        .test-answers {
+            counter-reset: my-counter 11;
+            margin-bottom: 30px;
+        }
+
+        .test-answers .radio-label {
+            cursor: pointer;
+        }
+
+        .test-answers .radio-label:hover .radio-icon::before,
+        .test-answers .radio-label .radio-icon::before {
+            align-items: center;
+            counter-increment: my-counter -1;
+            content: counter(my-counter) "";
+            display: flex;
+            justify-content: center;
+            height: 20px;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+        }
+
+        .test-answers .radio-label:hover .radio-icon,
+        .test-answers input[type="radio"]:checked+.radio-icon {
+            border-color: green;
+        }
+
+        .test-answers input[type="radio"]:checked+.radio-icon::before {
+            background-color: green;
+            content: counter(my-counter) "";
+            color: #fff;
+            height: 20px;
+            width: 20px;
+        }
+
+        .test-result-form {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 500px;
+        }
+
+        .test-result-form .form-label {
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <div class="wrapper">
+
+        <div class="page-content">
+            <div class="container">
+
+                <h1 class="text-center">Беседа перед тестом</h1>
+
+                <form class="test-wrapper" action="" method="post">
+                    <div class="test-step is-active">
+                        <div class="responsive-video">
+                            <video poster="https://www.sibircentr.ru/bitrix/templates/2021/images/content/enter/poster.jpg" controls="controls">
+                                <source type="video/mp4" src="https://www.sibircentr.ru/images/content/video_new.mp4">
+                            </video>
+                        </div>
+                        <p class="text-center">Для определения Вашего уровня жизни предлагаем пройти тест.</p>
+                        <p class="text-center"><button class="js-next js-prepare button" type="button">ТЕСТ</button></p>
+                    </div>
+
+                    <div class="test-step">
+                        <p class="text-center">В каждом вопросе выберите 1 вариант ответа, соответствующий Вашей текущей ситуации.<br> Отметьте его.<br> Затем нажмите на кнопку «Далее» и Вы перейдете к следующему вопросу.</p>
+                        <p class="text-center"><button class="js-next js-start button" type="button">Начать тестирование</button></p>
+                    </div>
+
+                    <div class="test-questions">
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 1 из 15</h4>
+                            <h2 class="text-center">Душевное состояние</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_1" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Гармония в душе
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_1" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Я спокоен, меня очень сложно вывести из равновесия
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_1" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Я легко могу сесть и расслабиться
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_1" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Знаю и иногда применяю техники расслабления
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_1" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Чаще всего я чувствую себя спокойно и уравновешенно
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_1" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Редко бывают беспокойные мысли, но я легко с ними справляюсь
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_1" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Я часто переживаю по мелочам, принимаю все близко к сердцу
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_1" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Я постоянно нервничаю, на мне груз ответственности
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_1" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Повышенная тревожность, бывают панические атаки
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_1" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Постоянная тревожность, часто панические атаки
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_1" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Я часто нахожусь в стрессе и нервном напряжении
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 2 из 15</h4>
+                            <h2 class="text-center">Чувство благодарности</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_2" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Испытываю чувство благодарности ко всем и ко всему
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_2" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Каждое утро пишу 5 благодарностей кому-либо
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_2" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Для меня естественно испытывать благодарность
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_2" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Я просыпаюсь с чувством благодарности
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_2" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Благодарю людей за прямые конкретные действия в мой адрес
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_2" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Бывает, что я благодарю людей
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_2" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Редко благодарю кого-то
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_2" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Благодарю только в ответ
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_2" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Испытываю дискомфорт, когда благодарю кого-то
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_2" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Никогда никого не благодарю
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_2" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Не вижу смысла в благодарности
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 3 из 15</h4>
+                            <h2 class="text-center">Отношения с детьми</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_3" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Люблю и понимаю своих детей, принимаю такими какие они есть
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_3" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Доверительные отношения, много теплоты, открытости и взаимопонимания
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_3" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Уважаем, поддерживаем и прислушиваемся друг к другу
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_3" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    С удовольствием общаемся, проводим вместе время
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_3" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Ищу контакт с ребенком, но он закрывается от меня
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_3" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Стараюсь проводить больше времени, но отношения напряженные
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_3" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Провожу с детьми мало времени
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_3" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Очень разные взгляды, нет взаимопонимания
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_3" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Плохие отношения, ссоры и обиды
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_3" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Не хочу заниматься детьми, мне это неинтересно
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_3" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Нет детей
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 4 из 15</h4>
+                            <h2 class="text-center">Отношения с родителями</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_4" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Говорим по душам, советуюсь, благодарю за мудрость
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_4" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Гармоничные теплые отношения
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_4" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    С удовольствием проводим время вместе
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_4" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Общаемся почти каждый день, поддерживаем друг друга
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_4" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Общаемся регулярно, но хотелось бы чаще
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_4" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Редко общаемся, но отношения хорошие
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_4" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Отношения не очень хорошие. Иногда ссоримся
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_4" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Приходится общаться, но мы не можем найти общий язык
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_4" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Плохие отношения, ссоры и обиды
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_4" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Совсем не общаемся
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_4" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Нет родителей
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 5 из 15</h4>
+                            <h2 class="text-center">Личные отношения (со второй половиной)</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_5" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Любовь, полное взаимопонимание
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_5" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Надежные доверительные отношения
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_5" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Общие ценности, взаимоуважение, забота друг о друге
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_5" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Слышим, понимаем и поддерживаем друг друга
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_5" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Спокойные ровные отношения
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_5" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Все хорошо, но иногда бывают недопонимания
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_5" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Чаще всего не слышим, не понимаем и не поддерживаем друг друга
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_5" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Конфликтуем, постоянно выясняем отношения
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_5" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Разные ценности, взгляды, отсутствует уважение
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_5" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    На грани развода/ расставания
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_5" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Нет отношений
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 6 из 15</h4>
+                            <h2 class="text-center">Состояние здоровья</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_6" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Я здоров, чувствую себя отлично
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_6" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Почти никогда не болею
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_6" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Чувствую себя крепким и энергичным
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_6" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Редко болею
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_6" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Чувствую себя хорошо, есть силы
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_6" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Интересуюсь укреплением своего здоровья
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_6" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Иногда чувствую себя неважно
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_6" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Болею каждый сезон (3-4 раза в год)
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_6" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Частые жалобы на здоровье
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_6" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Постоянно болею
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_6" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Чувствую себя умирающим
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 7 из 15</h4>
+                            <h2 class="text-center">Окружение и друзья</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_7" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Мой круг общение- это успешные, реализованные люди. Я получаю удовольствие от общения
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_7" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    У меня много друзей, знакомых, с которыми интересно вместе проводить время
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_7" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Есть время и возможности для встреч с друзьями
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_7" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    У меня достаточно друзей и знакомых, но не всегда хватает времени для встреч с ними
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_7" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Мое окружение меня устраивает
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_7" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Хочу завести друзей, но не получается
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_7" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Мое окружение меня не устраивает
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_7" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    У меня ограниченный круг общения, который мне не интересен
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_7" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Общаюсь только по необходимости
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_7" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Избегаю необязательного общения с другими людьми
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_7" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    У меня нет друзей. В общении не заинтересован
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 8 из 15</h4>
+                            <h2 class="text-center">Физическая активность</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_8" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Постоянно веду активный образ жизни, регулярные и системные тренировки
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_8" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Интенсивные тренировки 3 - 4 раза в неделю
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_8" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Тренировки или спортивное хобби несколько раз в неделю
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_8" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Легкая тренировка 1-2 раза в неделю
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_8" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Ежедневная зарядка утром 10-15 минут
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_8" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Занимаюсь от случая к случаю
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_8" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Небольшие нагрузки, связанные с рутинными делами
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_8" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Слабая дневная активность
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_8" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Максимум прогулка до работы или магазина
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_8" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Сидячий образ жизни, минимальная активность
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_8" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Устаю на работе, нет сил. Ничего не делаю
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 9 из 15</h4>
+                            <h2 class="text-center">Отдых и развлечения</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_9" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Отдыхая, я зарабатываю
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_9" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Я – человек-праздник!
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_9" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Часто отдыхаю и развлекаюсь
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_9" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    В моей жизни предостаточно отдыха и развлечений
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_9" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Я эффективно совмещаю отдых, работу и семью
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_9" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Развлекаюсь от случая к случаю
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_9" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Отдыхаю только по праздникам и в отпуске
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_9" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Редко отдыхаю и развлекаюсь
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_9" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Много работаю. Нет времени на отдых и развлечения
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_9" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Отдых - это удел лентяев и пустая трата времени
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_9" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Не умею отдыхать
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 10 из 15</h4>
+                            <h2 class="text-center">Путешествия</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_10" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Путешествую, когда хочу
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_10" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Отправляюсь в путешествие при каждой возможности
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_10" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Часто путешествую
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_10" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Люблю и могу позволить себе путешествие несколько раз в год
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_10" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Могу позволить себе разнообразные путешествия
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_10" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Люблю путешествия, но могу позволить себе 1 раз в год
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_10" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Редко путешествую
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_10" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Путешествую только в мыслях. Нет времени и возможности путешествовать
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_10" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Не люблю путешествовать. Предпочитаю сидеть дома
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_10" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Мысли о путешествии вызывают у меня страх
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_10" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Никогда не путешествовал
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 11 из 15</h4>
+                            <h2 class="text-center">Вредные привычки</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_11" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Я занимаюсь собой и делаю все для своего улучшения
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_11" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Нет вредных привычек
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_11" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Раньше были вредные привычки, но я смог от них отказаться
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_11" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Избавляюсь от 1 вредной привычки каждый месяц
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_11" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Почти нет вредных привычек
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_11" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Пробую, но не могу избавиться от вредных привычек
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_11" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Пытаюсь контролировать свои вредные привычки
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_11" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Мои вредные привычки мешают жить мне и моим близким
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_11" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Не могу контролировать свои вредные привычки
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_11" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Не хочу избавляться от вредных привычек
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_11" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Веду неправильный (нездоровый) образ жизни
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 12 из 15</h4>
+                            <h2 class="text-center">Образование/ саморазвитие</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_12" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    У меня есть план действий по саморазвитию на год, иду к цели
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_12" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Постоянно учусь чему-то новому
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_12" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Ежедневно читаю минимум 20 минут, смотрю обучающие видео или осваиваю новый навык
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_12" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Каждую неделю читаю, смотрю обучающие видео или делаю что-то новое
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_12" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Мне интересны книги, видео и другие материалы по саморазвитию
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_12" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Изучаю что-то новенькое от случая к случаю
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_12" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Редко учусь чему-то новому. Предпочитаю совершенствовать уже приобретенные навыки
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_12" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Не хватает времени и/или денег на обучение чему-либо
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_12" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    В принципе, мне хватает моего образования
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_12" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Не хочу обучаться новому
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_12" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Мне нечему учиться. Я и так все знаю
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 13 из 15</h4>
+                            <h2 class="text-center">Карьера/ бизнес</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_13" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Достиг всех поставленных целей. Имею высокий пассивный доход
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_13" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Достиг высокого уровня в бизнесе/карьере
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_13" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    У меня стабильно увеличивается доход
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_13" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Есть подробный план увелечения дохода в ближайшее время
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_13" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Есть основной заработок и дополнительный доход
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_13" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Стабильная работа, регулярный доход
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_13" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    На работе меня не ценят
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_13" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Работаю на нелюбимой работе
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_13" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Вынужден работать
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_13" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Нет работы и нет возможности устроиться на хорошую работу
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_13" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Нет работы и не хочу работать
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 14 из 15</h4>
+                            <h2 class="text-center">Ежемесячный доход</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_14" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Высокий уровень дохода. При всем желании не успеваю все потратить
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_14" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Могу купить квартиру или новый дом без особых трудностей
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_14" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Достаточно высокий ежемесячный доход, но стремлюсь к большему
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_14" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Доходы превышают расходы
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_14" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Контролирую доход и расход денежных средств
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_14" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Живу от зарплаты до зарплаты
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_14" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Денег хватает на питание и предметы первой необходимости
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_14" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Доход не стабильный, иногда достаточно низкий
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_14" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Денег с трудом хватает на питание
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_14" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Сумма долгов/ кредитов больше ежемесячного дохода
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_14" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Не работаю
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next button" type="button" disabled>Следующий вопрос</button></p>
+                        </div>
+
+                        <div class="test-step test-question">
+                            <p class="text-center">Выберите 1 вариант ответа и нажмите на кнопку «Далее»</p>
+                            <h4 class="text-center">Вопрос 15 из 15</h4>
+                            <h2 class="text-center">Свободные накопления</h2>
+                            <div class="test-answers">
+                                <label class="radio-label">
+                                    <input name="q_15" type="radio" value="10">
+                                    <span class="radio-icon"></span>
+                                    Если сегодня приход денег прекратится, то смогу прожить на том же уровне еще год
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_15" type="radio" value="9">
+                                    <span class="radio-icon"></span>
+                                    Свободные накопления есть, изучаю рынок инвестиций
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_15" type="radio" value="8">
+                                    <span class="radio-icon"></span>
+                                    Если сегодня приход денег прекратится, то смогу прожить на том же уровне 6 месяцев
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_15" type="radio" value="7">
+                                    <span class="radio-icon"></span>
+                                    Стабильно откладываю 20% от ежедневного дохода
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_15" type="radio" value="6">
+                                    <span class="radio-icon"></span>
+                                    Могу откладывать не более 10% от ежемесячного дохода
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_15" type="radio" value="5">
+                                    <span class="radio-icon"></span>
+                                    Вырос в доходе, только начинаю откладывать
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_15" type="radio" value="4">
+                                    <span class="radio-icon"></span>
+                                    Может и есть возможность откладывать, но не умею копить деньги
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_15" type="radio" value="3">
+                                    <span class="radio-icon"></span>
+                                    Живу от получки до получки. Накоплений нет
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_15" type="radio" value="2">
+                                    <span class="radio-icon"></span>
+                                    Нет возможности откладывать свободные деньги
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_15" type="radio" value="1">
+                                    <span class="radio-icon"></span>
+                                    Есть долги и/или кредиты. Откладывать нечего
+                                </label>
+                                <label class="radio-label">
+                                    <input name="q_15" type="radio" value="0">
+                                    <span class="radio-icon"></span>
+                                    Нет свободных накоплений
+                                </label>
+                            </div>
+                            <p class="text-center"><button class="js-next js-finish button" type="button" disabled>Получить результат</button></p>
+                        </div>
+                    </div>
+
+                    <div class="test-step">
+                        <p class="text-center">
+                            Для получения результатов тестирования заполните форму, размещенную ниже, и нажмите на кнопку Отправить.<br>
+                            На Ваш адрес электронной почты будет направлена ссылка-подтверждение с результатами тестирования
+                        </p>
+                        <div class="test-result-form">
+                            <label class="form-label" for="fio">
+                                <span class="form-label__text">Ф.И.О.<span class="required">*</span></span>
+                                <input id="fio" class="input" name="fio" type="text">
+                            </label>
+                            <label class="form-label" for="phone">
+                                <span class="form-label__text">Телефон<span class="required">*</span></span>
+                                <input id="phone" class="input" name="phone" type="text">
+                            </label>
+                            <label class="form-label" for="email">
+                                <span class="form-label__text">E-Mail<span class="required">*</span></span>
+                                <input id="email" class="input" name="email" type="text">
+                            </label>
+
+                            <label class="checkbox-label">
+                                <input name="terms" type="checkbox">
+                                <span class="checkbox-icon"></span>
+                                Согласен на обработку персональных данных
+                            </label>
+
+                            <p class="text-center"><button class="button" type="submit" disabled>Отправить</button></p>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    //= template/scripts.html
+
+    <script>
+        $(document).ready(function() {
+            $('.test-wrapper')[0].reset();
+            $('.js-next-step').prop('disabled', 'disabled');
+        });
+
+        $(document).on('click', '.js-next', function() {
+            if ($(this).hasClass('js-prepare')) {
+
+                $('h1').text('Инструкция по прохождению теста');
+                $(this).closest('.test-step').removeClass('is-active');
+                $(this).closest('.test-step').next('.test-step').addClass('is-active');
+
+            } else if ($(this).hasClass('js-start')) {
+
+                $(this).closest('.test-step').removeClass('is-active');
+                $('.test-questions').find('.test-question').eq(0).addClass('is-active');
+
+                $('h1').hide();
+            } else if ($(this).hasClass('js-finish')) {
+
+                $('h1').show().text('Получить результаты');
+                $(this).closest('.test-step').removeClass('is-active');
+                $('.test-questions').next('.test-step').addClass('is-active');
+
+            } else {
+
+                $(this).closest('.test-step').removeClass('is-active');
+                $(this).closest('.test-step').next('.test-step').addClass('is-active');
+
+            }
+
+            return false;
+        });
+
+        $(document).on('change', 'input[type="radio"]', function() {
+            $(this).closest('.test-step').find('.js-next').prop('disabled', '');
+        });
+    </script>
+
+</body>
+
+</html>

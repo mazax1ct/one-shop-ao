@@ -1,0 +1,41 @@
+.notifications
+  display: flex
+  margin-bottom: 40px
+  overflow-x: auto
+
+  @media(min-width: 1280px)
+    margin-bottom: 60px
+
+  @media(min-width: 1600px)
+    margin-bottom: 80px
+
+
+.notifications-arrows
+  display: flex
+  justify-content: flex-end
+  margin-bottom: 16px
+
+  .slick-prev
+    margin-right: 8px
+
+.notify
+  max-width: 234px
+  padding-left: 12px
+
+  @media(min-width: 768px)
+    padding-left: 24px
+
+  a
+    color: $text-color
+    display: block
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+  &__image
+    display: block
+    margin-bottom: 12px
+
+  &__text
+    display: block

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>One-shop - Каталог</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  //= template/favicon.html
+
+  //= template/style.html
+</head>
+
+<body>
+
+  //= template/sprite.html
+
+  <div class="wrapper">
+
+    //= template/header.html
+
+    <div class="page-content">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item">Каталог</li>
+        </ul>
+        <div class="page-columns">
+          <div class="page-columns__left">
+            <div class="js-sticky-block">
+              <div class="js-selectbox selectbox">
+                <div class="selectbox__value">Все товары</div>
+                <ul id="float-nav" class="float-nav selectbox__list">
+                  <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link selected" href="#">Все товары</a></li>
+                  <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link" href="#">Информационные продукты</a></li>
+                  <li class="float-nav__item selectbox__item">
+                    <a class="float-nav__link selectbox__link" href="#">Продуктовые наборы</a>
+                    <ul class="sub-menu">
+                      <li><a class="selected" href="#">Директорская школа</a></li>
+                      <li><a href="#">Офисные наборы</a></li>
+                      <li><a href="#">Уровни доступа СиРБиО</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="js-content-with-sticky page-columns__right">
+            <h1>Каталог</h1>
+            <div class="catalog-filter">
+              <ol class="pager">
+                <li class="pager__item">
+                  <a class="pager__link disabled" title="Назад">
+                    <svg class="pager__icon" aria-hidden="true">
+                      <use xlink:href="#prev_arrow" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="pager__item"><a class="pager__link is-active" href="#">1</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">2</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">3</a></li>
+                <li class="pager__item">
+                  <a class="pager__link" href="#" title="Вперёд">
+                    <svg class="pager__icon" aria-hidden="true">
+                      <use xlink:href="#next_arrow" />
+                    </svg>
+                  </a>
+                </li>
+              </ol>
+              <div class="catalog-view-block">
+                Вид
+                <button class="js-catalog-view catalog-view is-active" type="button" title="Плитка" data-target="catalog-list--type_1">
+                  <svg class="catalog-view__icon" aria-hidden="true">
+                    <use xlink:href="#catalog_view_1" />
+                  </svg>
+                </button>
+                <button class="js-catalog-view catalog-view" type="button" title="Таблица" data-target="catalog-list--type_2">
+                  <svg class="catalog-view__icon" aria-hidden="true">
+                    <use xlink:href="#catalog_view_2" />
+                  </svg>
+                </button>
+                <button class="js-catalog-view catalog-view" type="button" title="Компактный" data-target="catalog-list--type_3">
+                  <svg class="catalog-view__icon" aria-hidden="true">
+                    <use xlink:href="#catalog_view_3" />
+                  </svg>
+                </button>
+              </div>
+              <div class="show-qnt">
+                Показать
+                <a class="show-qnt__button" href="#">12</a>
+                <a class="show-qnt__button" href="#">24</a>
+                <a class="show-qnt__button" href="#">36</a>
+              </div>
+            </div>
+            <div class="catalog-list catalog-list--type_1">
+              <div class="catalog-list__item">
+                <div class="catalog-item">
+                  <div class="catalog-item__info">
+                    <p class="catalog-item__title">
+                      <a href="catalog-detail.html">
+                        <span class="catalog-item__image"><img src="images/content/catalog/img_1.jpg" alt=""></span>
+                        Набор № 1
+                      </a>
+                    </p>
+                  </div>
+                  <div class="catalog-item__buy-block">
+                    <p class="catalog-item__price">3000 ₽</p>
+                    <div class="catalog-item__quantity quantity">
+                      <button class="quantity__button" type="button" title="Уменьшить">
+                        <svg class="quantity__button-icon" aria-hidden="true">
+                          <use xlink:href="#minus" />
+                        </svg>
+                      </button>
+                      <input class="quantity__input" type="text" value="1">
+                      <button class="quantity__button" type="button" title="Увеличить">
+                        <svg class="quantity__button-icon" aria-hidden="true">
+                          <use xlink:href="#plus" />
+                        </svg>
+                      </button>
+                    </div>
+                    <a class="catalog-item__button" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog-list__item">
+                <div class="catalog-item">
+                  <div class="catalog-item__info">
+                    <p class="catalog-item__title">
+                      <a href="catalog-detail.html">
+                        <span class="catalog-item__image"><img src="images/content/catalog/img_2.jpg" alt=""></span>
+                        Набор № 2
+                      </a>
+                    </p>
+                  </div>
+                  <div class="catalog-item__buy-block">
+                    <p class="catalog-item__price">3000 ₽</p>
+                    <div class="catalog-item__quantity quantity">
+                      <button class="quantity__button" type="button" title="Уменьшить">
+                        <svg class="quantity__button-icon" aria-hidden="true">
+                          <use xlink:href="#minus" />
+                        </svg>
+                      </button>
+                      <input class="quantity__input" type="text" value="1">
+                      <button class="quantity__button" type="button" title="Увеличить">
+                        <svg class="quantity__button-icon" aria-hidden="true">
+                          <use xlink:href="#plus" />
+                        </svg>
+                      </button>
+                    </div>
+                    <a class="catalog-item__button disabled">Нет в наличии</a>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog-list__item">
+                <div class="catalog-item">
+                  <div class="catalog-item__info">
+                    <span class="catalog-item__labels">
+                      <span class="catalog-item__label">Новинка</span>
+                      <span class="catalog-item__label">Старинка</span>
+                    </span>
+                    <p class="catalog-item__title">
+                      <a href="catalog-detail.html">
+                        <span class="catalog-item__image"><img src="images/content/catalog/img_3.jpg" alt=""></span>
+                        Офисный набор и 200 визитных карточек
+                      </a>
+                    </p>
+                    <p class="catalog-item__description">Набор брендированной продукции с символикой ПСПФНР для работы и проведения мероприятий.</p>
+                  </div>
+                  <div class="catalog-item__buy-block">
+                    <p class="catalog-item__price">3000 ₽</p>
+                    <div class="catalog-item__quantity quantity">
+                      <button class="quantity__button" type="button" title="Уменьшить">
+                        <svg class="quantity__button-icon" aria-hidden="true">
+                          <use xlink:href="#minus" />
+                        </svg>
+                      </button>
+                      <input class="quantity__input" type="text" value="1">
+                      <button class="quantity__button" type="button" title="Увеличить">
+                        <svg class="quantity__button-icon" aria-hidden="true">
+                          <use xlink:href="#plus" />
+                        </svg>
+                      </button>
+                    </div>
+                    <a class="catalog-item__button" href="#">В корзину</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="catalog-bottom">
+              <ol class="pager">
+                <li class="pager__item">
+                  <a class="pager__link disabled" title="Назад">
+                    <svg class="pager__icon" aria-hidden="true">
+                      <use xlink:href="#prev_arrow" />
+                    </svg>
+                  </a>
+                </li>
+                <li class="pager__item"><a class="pager__link is-active" href="#">1</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">2</a></li>
+                <li class="pager__item"><a class="pager__link" href="#">3</a></li>
+                <li class="pager__item">
+                  <a class="pager__link" href="#" title="Вперёд">
+                    <svg class="pager__icon" aria-hidden="true">
+                      <use xlink:href="#next_arrow" />
+                    </svg>
+                  </a>
+                </li>
+              </ol>
+              <a class="js-go-top go-top" href="#">
+                <svg class="pager__icon" aria-hidden="true">
+                  <use xlink:href="#arrow_up" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  //= template/footer.html
+
+  //= template/scripts.html
+
+  <script src="js/jquery.sticky-kit.min.js"></script>
+  <script src="js/ddscrollspy.js"></script>
+  <script src="js/select-menu.js"></script>
+  <script>
+    $(document).ready(function () {
+      //превращаем меню в селект
+      if ($(".js-selectbox").length) {
+        if ($("body").width() < 1280) {
+          $('.js-selectbox').selectbox();
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

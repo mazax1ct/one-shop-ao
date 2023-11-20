@@ -1,0 +1,79 @@
+html
+  box-sizing: border-box
+  font-family: sans-serif
+  height: 100%
+
+*,
+*::after,
+*::before
+  box-sizing: inherit
+
+body
+  display: flex
+  flex-direction: column
+  height: 100%
+  min-height: 100%
+  min-width: 320px
+  overflow-wrap: break-word
+
+.wrapper
+  flex: 1 0 auto
+
+.container
+  margin-left: auto
+  margin-right: auto
+  max-width: 1920px
+  padding-left: 10px
+  padding-right: 10px
+
+  @media(min-width: 768px)
+    padding-left: 25px
+    padding-right: 25px
+
+  @media(min-width: 1280px)
+    padding-left: 50px
+    padding-right: 50px
+
+  @media(min-width: 1600px)
+    padding-left: 100px
+    padding-right: 100px
+
+.main-page
+  .page-content
+    @media(min-width: 1280px)
+      padding-top: 155px
+
+.page-content
+  padding-top: 50px
+  padding-bottom: 55px
+
+  @media(min-width: 768px)
+    padding-top: 70px
+
+  @media(min-width: 1280px)
+    padding-top: 175px
+    padding-bottom: 100px
+
+.page-columns
+  @media(min-width: 1280px)
+    display: flex
+
+  &__left
+    @media(min-width: 1280px)
+      min-width: 24.15254%
+      padding-right: 100px
+      padding-top: 130px
+      width: 24.15254%
+
+    @media(min-width: 1600px)
+      min-width: 25.71428%
+      width: 25.71428%
+
+  &__right
+    flex-grow: 1
+
+    @media(min-width: 1280px)
+      width: 75.84746%
+
+    @media(min-width: 1600px)
+      width: 74.28572%

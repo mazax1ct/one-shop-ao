@@ -1,0 +1,73 @@
+.lider
+  border-bottom: 1px solid #CFCFCF
+  margin-bottom: 30px
+  padding-bottom: 30px
+
+  @media(min-width: 768px)
+    display: flex
+
+  &:last-child
+    margin-bottom: 0
+
+  &__photo
+    margin-bottom: 20px
+    padding-right: 60px
+
+    @media(min-width: 768px)
+      min-width: 240px
+      margin-bottom: 0
+      padding-right: 0
+      width: 240px
+
+  &__info
+    @media(min-width: 768px)
+      padding-top: 35px
+      padding-left: 35px
+
+    @media(min-width: 1280px)
+      padding-left: 65px
+
+  &__name
+    font-size: 20px
+    font-weight: 700
+    line-height: 24px
+    margin-bottom: 10px
+
+  &__city
+    @media(min-width: 768px)
+      margin-bottom: 50px
+
+  &__contacts-title
+    margin-bottom: 10px
+
+  &__contacts-title,
+  &__contacts
+    font-size: 15px
+    line-height: 23px
+
+  &__contacts
+    @media(min-width: 768px)
+      margin-bottom: 20px
+
+    @media(min-width: 1280px)
+      display: flex
+      flex-wrap: wrap
+
+  &__contacts-item
+    margin-bottom: 10px
+
+    @media(min-width: 1280px)
+      padding-right: 40px
+
+    p
+      margin-bottom: 10px
+
+    a
+      text-decoration: none
+
+  &__socials
+    display: flex
+    flex-wrap: wrap
+
+    .social
+      margin-right: 10px

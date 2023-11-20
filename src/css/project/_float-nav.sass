@@ -1,0 +1,127 @@
+.float-nav
+  @media(min-width: 1280px)
+    font-size: 15px
+    line-height: 22px
+
+  &__link
+    @media(min-width: 1280px)
+      color: #000
+      display: block
+      position: relative
+      padding-left: 28px
+      text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+    &::before
+      @media(min-width: 1280px)
+        background-color: #B1B1B1
+        border-radius: 50%
+        content: ''
+        height: 10px
+        left: 0
+        position: absolute
+        top: 5px
+        width: 10px
+        z-index: 1
+
+    &.selected
+      @media(min-width: 1280px)
+        font-weight: 700
+
+      &::before
+        @media(min-width: 1280px)
+          background-color: #335A00
+
+  &__item
+    @media(min-width: 1280px)
+      margin-bottom: 20px
+
+  .sub-menu
+    display: none
+
+    @media(min-width: 1280px)
+      display: block
+
+.sub-menu
+  font-size: 13px
+  line-height: 20px
+  margin-top: 20px
+  padding-left: 50px
+
+  li
+    margin-bottom: 10px
+
+  a
+    color: $text-color
+    text-decoration: none
+
+    &.selected
+      color: #969696
+
+.selectbox
+  @media(max-width: 1279px)
+    font-size: 15px
+    line-height: 22px
+    margin-bottom: 50px
+    position: relative
+    width: 280px
+    z-index: 3
+
+  &.is-open
+    .selectbox__list
+      @media(max-width: 1279px)
+        display: block
+
+  a
+    @media(max-width: 1279px)
+      color: #000
+      font-weight: 700
+      text-decoration: none
+
+  &__value
+    @media(max-width: 1279px)
+      border: 1px solid #000
+      cursor: pointer
+      font-weight: 700
+      height: 55px
+      padding: 16px 40px 15px 20px
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+
+    @media(min-width: 1280px)
+      display: none
+
+    &::after
+      @media(max-width: 1279px)
+        background-image: url("data:image/svg+xml,%3Csvg width='18' height='11' viewBox='0 0 18 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.982033 1.7547C0.982033 1.4547 1.08203 1.2547 1.28203 1.0547C1.68203 0.654699 2.28203 0.654699 2.68203 1.0547L9.28203 7.7547L15.882 1.0547C16.282 0.6547 16.882 0.6547 17.282 1.0547C17.682 1.4547 17.682 2.0547 17.282 2.4547L9.98203 9.8547C9.78203 10.0547 9.58203 10.1547 9.28203 10.1547C8.98203 10.1547 8.78203 10.0547 8.58203 9.8547L1.28203 2.4547C1.08203 2.2547 0.982033 2.0547 0.982033 1.7547Z' fill='black'/%3E%3C/svg%3E%0A")
+        background-repeat: no-repeat
+        background-position: 50% 50%
+        content: ''
+        height: 100%
+        left: auto
+        position: absolute
+        right: 0
+        top: 0
+        width: 40px
+        z-index: 1
+
+  &__list
+    @media(max-width: 1279px)
+      border: 1px solid #000
+      background-color: #fff
+      display: none
+      left: 0
+      max-height: 220px
+      overflow-y: auto
+      position: absolute
+      top: 54px
+      width: 100%
+      z-index: 1
+
+    a
+      @media(max-width: 1279px)
+        display: block
+        padding: 16px 20px 15px

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+    <title>One-shop - Личный кабинет акционера</title>
+
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    //= template/favicon.html
+
+    //= template/style.html
+</head>
+
+<body>
+
+    //= template/sprite.html
+
+    <div class="wrapper">
+
+        //= template/header_auth.html
+
+        <div class="page-content">
+            <div class="container">
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+                    <li class="breadcrumbs__item">Личный кабинет акционера</li>
+                </ul>
+                <div class="page-columns">
+                    <div class="page-columns__left">
+                        <div class="js-sticky-block">
+                            <div class="js-selectbox selectbox">
+                                <div class="selectbox__value">Настройки профиля</div>
+                                <ul id="float-nav" class="float-nav selectbox__list">
+                                    <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link" href="personal.html">Личный кабинет</a></li>
+                                    <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link" href="news.html">Новости</a></li>
+                                    <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link" href="docs.html">Документы компании</a></li>
+                                    <li class="float-nav__item selectbox__item"><a class="float-nav__link selectbox__link selected" href="settings.html">Настройки профиля</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="js-content-with-sticky page-columns__right">
+                        <h1>Настройки профиля</h1>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    //= template/footer.html
+
+    //= template/scripts.html
+
+    <script src="js/select-menu.js"></script>
+    <script>
+        $(document).ready(function() {
+            //превращаем меню в селект
+            if ($(".js-selectbox").length) {
+                if ($("body").width() < 1280) {
+                    $('.js-selectbox').selectbox();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

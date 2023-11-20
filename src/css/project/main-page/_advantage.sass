@@ -1,0 +1,128 @@
+.advantage-block
+  overflow: hidden
+
+  &__list
+    @media(min-width: 768px)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+  &__item
+    margin-bottom: 20px
+
+    @media(min-width: 768px)
+      margin-bottom: 0
+
+    &:nth-child(1)
+      @media(min-width: 768px)
+        max-width: 59%
+        margin-bottom: 40px
+
+      @media(min-width: 1280px)
+        margin-right: -50px
+        margin-bottom: 80px
+
+      @media(min-width: 1600px)
+        margin-right: -100px
+
+      .advantage
+        @media(max-width: 767px)
+          display: block
+
+      .advantage__title
+        @media(max-width: 767px)
+          margin-top: 20px
+
+    &:nth-child(2)
+      @media(min-width: 768px)
+        align-self: flex-end
+        max-width: 41%
+        margin-bottom: 80px
+
+      @media(min-width: 1280px)
+        margin-bottom: 0
+
+    &:nth-child(3),
+    &:nth-child(4)
+      @media(min-width: 768px)
+        max-width: 50%
+        padding-left: 2%
+
+    &:nth-child(4)
+      @media(min-width: 768px)
+        margin-top: 60px
+
+    &:nth-child(5)
+      @media(min-width: 768px)
+        margin-top: 60px
+        padding-left: 30%
+
+      //@media(min-width: 1280px)
+        max-width: 33%
+        padding-left: 2%
+
+    &:nth-child(4)
+      //@media(min-width: 768px)
+        padding-left: 27.14285%
+
+      //@media(min-width: 1280px)
+        padding-left: 17.14285%
+
+    &:nth-child(5)
+      //@media(min-width: 768px)
+        padding-left: 27.14285%
+
+      //@media(min-width: 1280px)
+        padding-left: 17.14285%
+
+  h2
+    @media(min-width: 768px)
+      margin-bottom: -40px
+      padding-left: 59%
+
+.advantage
+  align-items: flex-end
+  display: flex
+
+  &__image
+    margin-right: 20px
+
+    @media(min-width: 1280px)
+      margin-right: 60px
+
+    &--big
+      @media(min-width: 768px)
+        max-width: 270px
+
+      @media(min-width: 1280px)
+        max-width: 40.56%
+
+    &--mid
+      max-width: 135px
+
+      @media(min-width: 1280px)
+        max-width: 45.3%
+
+    &--small
+      max-width: 135px
+
+      @media(min-width: 1280px)
+        max-width: 31.25%
+
+  &__title
+    align-items: flex-end
+    border-left: 5px solid $text-color
+    display: flex
+    font-size: 14px
+    font-weight: 700
+    line-height: 22px
+    max-width: 200px
+    min-height: 3.66666em
+    position: relative
+    padding-left: 20px
+
+    @media(min-width: 1280px)
+      font-size: 18px
+      max-width: 250px
+      margin-left: -15px
+      padding-left: 15px

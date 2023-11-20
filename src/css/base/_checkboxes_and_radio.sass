@@ -1,0 +1,80 @@
+.checkbox-label,
+.radio-label
+  display: block
+  margin-bottom: 20px
+  position: relative
+  padding-left: 28px
+
+  &:last-child
+    margin-bottom: 0
+
+  &.disabled
+    &:focus
+      outline: none
+
+  &:focus
+    outline: 1px dotted inherit
+
+  input[type="checkbox"],
+  input[type="radio"]
+    position: absolute
+    height: 1px
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    width: 1px
+
+.checkbox-icon,
+.radio-icon
+  border: 1px solid #B3B3B3
+  cursor: pointer
+  height: 20px
+  left: 0
+  line-height: 20px
+  position: absolute
+  top: 0
+  text-align: center
+  width: 20px
+
+.checkbox-icon
+  border-radius: 3px
+
+.radio-icon
+  border-radius: 50%
+  font-size: 12px
+  top: -1px
+
+input[type="checkbox"]:checked + .checkbox-icon
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 5.42539L4.45177 10L13 1.24129L11.7728 0L4.45177 7.49995L1.21024 4.17535L0 5.42539Z' fill='%234E8709'/%3E%3C/svg%3E%0A")
+  background-repeat: no-repeat
+  background-position: 50% 50%
+  border-color: #4E8709
+
+input[type="radio"]:checked + .radio-icon:before
+  background-color: #000
+  border-radius: 50%
+  content: ""
+  height: 14px
+  left: 50%
+  position: absolute
+  top: 50%
+  transform: translate(-50%, -50%)
+  width: 14px
+
+input[type="radio"]:focus + .radio-icon,
+input[type="radio"]:active + .radio-icon
+  box-shadow: 0 0 0 2px #00d123
+
+.checkbox-text,
+.radio-text
+  cursor: pointer
+
+input[type="checkbox"]:disabled ~ .checkbox-text,
+input[type="checkbox"].disabled ~ .checkbox-text,
+input[type="checkbox"]:disabled ~ .checkbox-icon,
+input[type="checkbox"].disabled ~ .checkbox-icon,
+input[type="radio"]:disabled ~ .radio-text,
+input[type="radio"].disabled ~ .radio-text,
+input[type="radio"]:disabled ~ .radio-icon,
+input[type="radio"].disabled ~ .radio-icon
+  cursor: default
+  opacity: 0.5

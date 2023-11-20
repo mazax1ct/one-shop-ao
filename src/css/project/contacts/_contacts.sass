@@ -1,0 +1,61 @@
+.contacts
+  max-width: 1160px
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 40px
+
+  @media(min-width: 768px)
+    margin-bottom: 55px
+
+  &__list
+    @media(min-width: 768px)
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+
+  &__item
+    &:first-child
+      margin-bottom: 40px
+
+      @media(min-width: 768px)
+        flex-grow: 1
+        margin-bottom: 0
+        padding-right: 50px
+        width: 50%
+
+      @media(min-width: 1280px)
+        max-width: 450px
+        padding-right: 0
+
+    &:nth-child(2)
+      margin-bottom: 20px
+
+      @media(min-width: 768px)
+        flex-shrink: 0
+
+      @media(min-width: 1280px)
+        flex-grow: 1
+        padding-left: 100px
+
+  &__emails
+    p
+      margin-bottom: 20px
+
+    @media(min-width: 768px)
+      p
+        margin-bottom: 70px
+
+    @media(min-width: 1280px)
+      display: flex
+      justify-content: space-between
+
+.map
+  height: 450px
+  margin-left: -10px
+  margin-right: -10px
+  margin-bottom: -55px
+
+  @media(min-width: 768px)
+    margin-left: 0
+    margin-right: 0
+    margin-bottom: 0

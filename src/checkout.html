@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <title>One-shop - Оформление заказа</title>
+
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  //= template/favicon.html
+
+  //= template/style.html
+</head>
+
+<body>
+
+  //= template/sprite.html
+
+  <div class="wrapper">
+
+    //= template/header.html
+
+    <div class="page-content">
+      <div class="container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="main.html">Главная</a></li>
+          <li class="breadcrumbs__item">Оформление заказа</li>
+        </ul>
+        <h1>Оформление заказа</h1>
+        <form action="/" method="post">
+          <div class="checkout">
+            <div class="js-content-with-sticky checkout__left">
+              <p class="checkout__title">
+                1. Информация для оплаты и доставки заказа
+                <a class="buyer-info-toggle" href="#" onclick="fGetBuyerProps(this); return false;">Развернуть</a>
+                <input type="hidden" name="showProps" id="showProps" value="N">
+              </p>
+              <div class="select-wrapper">
+                <select class="js-select" style="width: 100%">
+                  <option>Учётка админа</option>
+                  <option>Новый профиль</option>
+                </select>
+              </div>
+
+              <p class="checkout__title">2. Информация о покупателе</p>
+
+              <label class="form-label" for="fio">
+                <span class="form-label__text">Ф.И.О.<span class="required">*</span></span>
+                <input id="fio" class="input" name="fio" type="text">
+              </label>
+
+              <label class="form-label" for="email">
+                <span class="form-label__text">E-Mail<span class="required">*</span></span>
+                <input id="email" class="input" name="email" type="text">
+              </label>
+
+              <label class="form-label" for="phone">
+                <span class="form-label__text">Телефон<span class="required">*</span></span>
+                <input id="phone" class="input" name="phone" type="text">
+              </label>
+
+              <p class="checkout__title">3. Выберите город доставки</p>
+
+              <div class="select-wrapper">
+                <select class="js-select" style="width: 100%">
+                  <option>Санкт-Петербург</option>
+                  <option>Москва</option>
+                  <option>Новосибирск</option>
+                </select>
+              </div>
+
+              <p class="checkout__title">4. Служба доставки</p>
+
+              <div class="delivery-list">
+                <div class="delivery-list__item">
+                  <input type="radio" id="ID_DELIVERY_ID_22" name="DELIVERY_ID" value="22" checked onclick="submitForm();">
+                  <label class="delivery-item" for="ID_DELIVERY_ID_22" onclick="BX('ID_DELIVERY_ID_22').checked=true;submitForm();">
+                    <span class="delivery-item__image"><img src="images/content/checkout/img_1.png" alt="Доставка СДЭК"></span>
+          					<span class="delivery-item__text">
+                      <b>Доставка от 2 до 7 дней</b><br>
+                       Стоимость: <b>300 руб.</b>
+          					</span>
+                  </label>
+                </div>
+                <div class="delivery-list__item">
+                  <input type="radio" id="ID_DELIVERY_ID_23" name="DELIVERY_ID" value="23" onclick="submitForm();">
+                  <label class="delivery-item" for="ID_DELIVERY_ID_23" onclick="BX('ID_DELIVERY_ID_23').checked=true;submitForm();">
+                    <span class="delivery-item__image"><img src="images/content/checkout/img_2.png" alt="Доставка"></span>
+          					<span class="delivery-item__text">
+                      <b>Доставка от 3 до 5 дней</b><br>
+                       Стоимость: <b>1200 руб.</b>
+          					</span>
+                  </label>
+                </div>
+                <div class="delivery-list__item">
+                  <input type="radio" id="ID_DELIVERY_ID_24" name="DELIVERY_ID" value="24" onclick="submitForm();">
+                  <label class="delivery-item" for="ID_DELIVERY_ID_24" onclick="BX('ID_DELIVERY_ID_24').checked=true;submitForm();">
+                    <span class="delivery-item__image"><img src="images/content/checkout/img_3.png" alt="Доставка"></span>
+          					<span class="delivery-item__text">
+                      <b>Доставка от 3 до 5 дней</b><br>
+                       Стоимость: <b>1200 руб.</b>
+          					</span>
+                  </label>
+                </div>
+              </div>
+
+              <p class="checkout__title">5. Платежная система</p>
+
+              <p><b>На вашем пользовательском счете недостаточно средств для полной оплаты заказа.<br> Необходимо <a href="#" target="_blank">пополнить</a> счет минимум на 3 200.00 руб.</b></p>
+
+              <div class="payments-list">
+                <div class="payments-list__item">
+                  <input type="radio" id="ID_PAY_SYSTEM_ID_2" name="PAY_SYSTEM_ID" checked value="2" onclick="changePaySystem();">
+                  <label class="payment-item" for="ID_PAY_SYSTEM_ID_2" onclick="BX('ID_PAY_SYSTEM_ID_2').checked=true;changePaySystem();">
+                    <span class="payment-item__image">
+                      <img src="images/content/checkout/img_4.png" alt="PayMaster">
+                    </span>
+                    <span class="payment-item__text"><b>PayMaster</b></span>
+                    <span class="payment-item__text">
+                      Оплата производится различными способами, через сервис PayMaster. Подтверждением вашей оплаты является электронное почтовое уведомление, пришедшее после оплаты.
+                    </span>
+                  </label>
+                </div>
+                <div class="payments-list__item">
+                  <input type="radio" id="ID_PAY_SYSTEM_ID_3" name="PAY_SYSTEM_ID" value="3" onclick="changePaySystem();">
+                  <label class="payment-item" for="ID_PAY_SYSTEM_ID_3" onclick="BX('ID_PAY_SYSTEM_ID_3').checked=true;changePaySystem();">
+                    <span class="payment-item__image">
+                      <img src="images/content/checkout/img_5.png" alt="Бонусный счет">
+                    </span>
+                    <span class="payment-item__text"><b>Бонусный счет</b></span>
+                    <span class="payment-item__text">
+                       На вашем бонусном счете есть <b>40&nbsp;499.05&nbsp;руб.</b> Средств достаточно для полной оплаты заказа.
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <p class="checkout__title">6. Свойства, связанные с оплатой и доставкой</p>
+
+              <div class="checkout__row">
+                <div class="checkout__row-item">
+                  <label class="form-label" for="index">
+                    <span class="form-label__text">Индекс<span class="required">*</span></span>
+                    <input id="index" class="input" name="index" type="text">
+                  </label>
+                </div>
+                <div class="checkout__row-item">
+                  <label class="form-label" for="street">
+                    <span class="form-label__text">Улица<span class="required">*</span></span>
+                    <input id="street" class="input" name="street" type="text">
+                  </label>
+                </div>
+                <div class="checkout__row-item">
+                  <label class="form-label" for="bld">
+                    <span class="form-label__text">Дом<span class="required">*</span></span>
+                    <input id="bld" class="input" name="bld" type="text">
+                  </label>
+                </div>
+                <div class="checkout__row-item">
+                  <label class="form-label" for="aprt">
+                    <span class="form-label__text">Квартира<span class="required">*</span></span>
+                    <input id="aprt" class="input" name="aprt" type="text">
+                  </label>
+                </div>
+                <div class="checkout__row-item">
+                  <label class="form-label" for="addressee">
+                    <span class="form-label__text">ФИО получателя<span class="required">*</span></span>
+                    <input id="addressee" class="input" name="addressee" type="text">
+                  </label>
+                </div>
+                <div class="checkout__row-item">
+                  <label class="form-label" for="addressee_phone">
+                    <span class="form-label__text">Телефон получателя<span class="required">*</span></span>
+                    <input id="addressee_phone" class="input" name="addressee_phone" type="text">
+                  </label>
+                </div>
+              </div>
+
+              <p class="checkout__title">7. Дополнительная информация к заказу</p>
+
+              <label class="form-label" for="comment">
+                <span class="form-label__text">Комментарии к заказу:</span>
+                <textarea id="comment" class="textarea" name="comment"></textarea>
+              </label>
+
+              <label class="checkbox-label" for="terms">
+                <input id="terms" name="terms" type="checkbox" value="">
+                <span class="checkbox-icon"></span>
+                оформляя заказ на поставку товара я соглашаюсь с <a href="#" target="_blank">договором оферты</a>
+              </label>
+            </div>
+            <div class="checkout__right">
+              <div class="js-sticky-block">
+                <div class="checkout-cart">
+                  <p class="checkout-cart__title">Ваш заказ (2)</p>
+                  <div class="checkout-cart__list">
+                    <div class="checkout-cart__list-item">
+                      <div class="ccart-item">
+                        <div class="ccart-item__description">
+                          <p class="ccart-item__title">
+                            <a href="#">
+                              <span class="ccart-item__image"><img src="images/content/cart/img_1.jpg" alt=""></span>
+                              Офисный набор и 200 визитных карточек
+                            </a>
+                          </p>
+                          <div class="ccart-item__info">
+                            <div class="quantity">
+                              <button class="quantity__button" type="button" title="Уменьшить">
+                                <svg class="quantity__button-icon" aria-hidden="true">
+                                  <use xlink:href="#minus" />
+                                </svg>
+                              </button>
+                              <input class="quantity__input" type="text" value="1">
+                              <button class="quantity__button" type="button" title="Увеличить">
+                                <svg class="quantity__button-icon" aria-hidden="true">
+                                  <use xlink:href="#plus" />
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="ccart-item__price">6000 ₽</div>
+                          </div>
+                          <button class="ccart-item__delete" type="button" title="Удалить">
+                            <svg class="ccart-item__delete-icon" aria-hidden="true">
+                              <use xlink:href="#close" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="checkout-cart__list-item">
+                      <div class="ccart-item">
+                        <div class="ccart-item__description">
+                          <p class="ccart-item__title">
+                            <a href="#">
+                              <span class="ccart-item__image"><img src="images/content/cart/img_1.jpg" alt=""></span>
+                              Офисный набор и 200 визитных карточек
+                            </a>
+                          </p>
+                          <div class="ccart-item__info">
+                            <div class="quantity">
+                              <button class="quantity__button" type="button" title="Уменьшить">
+                                <svg class="quantity__button-icon" aria-hidden="true">
+                                  <use xlink:href="#minus" />
+                                </svg>
+                              </button>
+                              <input class="quantity__input" type="text" value="1">
+                              <button class="quantity__button" type="button" title="Увеличить">
+                                <svg class="quantity__button-icon" aria-hidden="true">
+                                  <use xlink:href="#plus" />
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="ccart-item__price">6000 ₽</div>
+                          </div>
+                          <button class="ccart-item__delete" type="button" title="Удалить">
+                            <svg class="ccart-item__delete-icon" aria-hidden="true">
+                              <use xlink:href="#close" />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkout-total">
+                  <div class="checkout-total__info">
+                    <p class="checkout-total__info-row"><span>Общий вес:</span> <span>8.6 кг</span></p>
+                    <p class="checkout-total__info-row">Товаров на: <span class="checkout-total__price">6600 ₽</span></p>
+                    <p class="checkout-total__info-row">В том числе НДС: <span class="checkout-total__price">0 ₽</span></p>
+                    <p class="checkout-total__summ"><span class="checkout-total__summ-title">Итого:</span> <span class="checkout-total__summ-price">16 000 ₽</span></p>
+                  </div>
+                  <button class="checkout-total__button" type="button" data-fancybox="checkout-finish" data-src="#checkout-finish">Оформить заказ</button>
+                  <div id="checkout-finish" class="checkout-popup">
+                    <h3>Пожалуйста, проверьте указанные данные<br> и подтвердите отправку заказа.</h3>
+                    <p>
+                        ФИО покупателя: <b id="prop_fio">Учетка Админа</b><br>
+                        E-mail покупателя: <b id="prop_mail">support@psp.nixiz.ru</b><br>
+                        Телефон покупателя: <b id="prop_tel">79052222222</b><br><br>
+                        Способ оплаты: <b id="prop_payment">C внутреннего счета</b><br><br>
+                        Способ доставки: <b id="prop_delivery">Доставка СДЭК</b><br><br>
+                        Город доставки: <b id="prop_city">Санкт-Петербург, Ленинградская область, Россия</b><br><br>
+                        Индекс: <b id="prop_index">192281</b><br>
+                        Улица: <b id="prop_street">Маяковского улица</b><br>
+                        Дом: <b id="prop_house">47</b><br>
+                        Квартира: <b id="prop_apt">-</b><br>
+                        ФИО получателя: <b id="prop_fio_rec">рлорплорп олп орпорп</b><br>
+                        Телефон получателя: <b id="prop_tel_rec">+77905222222</b><br>
+                    </p>
+                    <div class="checkout-popup__buttons">
+                        <a class="simple-button simple-button--red" href="javascript:void();" onclick="closeConfirmPopup(); return false;" tabindex="-1">Исправить данные</a>
+                        <a class="simple-button simple-button--green" href="javascript:void();" onclick="applyConfirmPopup(); return false;" tabindex="-1">Оформить заказ</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  //= template/footer.html
+
+  //= template/scripts.html
+
+  <script src="js/jquery.sticky-kit.min.js"></script>
+
+</body>
+
+</html>
